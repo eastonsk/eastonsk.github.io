@@ -57,12 +57,12 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Rechercher"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -97,6 +97,58 @@
 <h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><p>1、git特点:<br>  分布式代码管理<br>2、本次git培训规范:<br>最大收获是这个了大家知晓下：<br>开发环境分支: dev<br>测试环境分支: master<br>生产发布分支: release<br>代码修复分支: hotfix</p>
 <h2 id="二、git使用命令方法"><a href="#二、git使用命令方法" class="headerlink" title="二、git使用命令方法"></a>二、git使用命令方法</h2><p>我自己写了点git使用命令，基本满足运维需求。<br>之所以选择命令操作，因为工具各异，不好统一。<br>1 命令是运维基本需要的，运维大多在服务器上调试，基本上没什么界面。<br>2 工具各异本质都是命令，修复问题，命令也是最后的大招了。</p>
 <h2 id="git命令使用范例："><a href="#git命令使用范例：" class="headerlink" title="git命令使用范例："></a>git命令使用范例：</h2><p>  基本包含以下操作：创建分支、切换分支、添加文件、合并代码、删除分支</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作命令</th>
+<th align="left">说明备注</th>
+<th align="right">范例</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">git  checkout -b name</td>
+<td align="left">name 创建的分支名称</td>
+<td align="right">git checkout -b dev</td>
+<td align="center">创建dev分支，并切到新分支 ‘dev’</td>
+</tr>
+<tr>
+<td align="center">git  branch</td>
+<td align="left">查看分支</td>
+<td align="right"></td>
+<td align="center">列出分支清单并且 * 表示当前所在分支</td>
+</tr>
+<tr>
+<td align="center">git add fname</td>
+<td align="left">fname 文件名</td>
+<td align="right">git add readme.txt</td>
+<td align="center">添加readme.txt 到git版本管理里</td>
+</tr>
+<tr>
+<td align="center">git commit</td>
+<td align="left">提交文件</td>
+<td align="right">git commit -m “add readme.txt dev”</td>
+<td align="center">提交文件到仓库</td>
+</tr>
+<tr>
+<td align="center">git checkout  name</td>
+<td align="left">切换到分支name</td>
+<td align="right">git checkout master</td>
+<td align="center">切换到master分支</td>
+</tr>
+<tr>
+<td align="center">git merge name</td>
+<td align="left">合并分支 name</td>
+<td align="right">git merge dev</td>
+<td align="center">把分支dev 合并到当前分支</td>
+</tr>
+<tr>
+<td align="center">git tag …</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="center">这个一般为了发布版本 包含创建 删除等操作</td>
+</tr>
+</tbody></table>
 <h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> git checkout -b dev</span><br><span class="line">切换到一个新分支 <span class="string">&#x27;dev&#x27;</span></span><br></pre></td></tr></table></figure>
 <h3 id="命令查看当前分支"><a href="#命令查看当前分支" class="headerlink" title="命令查看当前分支"></a>命令查看当前分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git branch</span><br><span class="line">* dev</span><br><span class="line">  main</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 <p>git branch命令会列出所有分支，当前分支前面会标一个*号。</p>
@@ -116,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/09/use-git/" data-id="ckm1opmu10000bt6day1pdoa5" data-title="use git" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/09/use-git/" data-id="ckm1opmu10000bt6day1pdoa5" data-title="use git" class="article-share-link">Partager</a>
       
       
       
@@ -169,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/09/hello-world/" data-id="ckm1izmb80001706d9ype4bhc" data-title="Hello World" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/09/hello-world/" data-id="ckm1izmb80001706d9ype4bhc" data-title="Hello World" class="article-share-link">Partager</a>
       
       
       
@@ -192,7 +244,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
     </div>
@@ -202,7 +254,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/git/" style="font-size: 10px;">git</a>
     </div>
@@ -211,7 +263,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li></ul>
     </div>
@@ -221,7 +273,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -247,7 +299,7 @@
     <div id="footer-info" class="inner">
       
       &copy; 2021 Easton yan<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      Propulsé par <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
