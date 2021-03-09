@@ -59,10 +59,10 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -94,11 +94,28 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1 Git 基本介绍<br>2 GIt 结合IDEA<br>3 Git 结合Eclipse基本操作<br>4 CodeReview详解<br>5 分支模型详解<br>6 Devops 平台简介</p>
-<h3 id="分布式管理"><a href="#分布式管理" class="headerlink" title="分布式管理"></a>分布式管理</h3>
+<h2 id="本次git培训基"><a href="#本次git培训基" class="headerlink" title="本次git培训基"></a>本次git培训基</h2><p>最大收获是这个了大家知晓下：<br>开发环境分支: dev<br>测试环境分支: master<br>生产发布分支: release<br>代码修复分支: hotfix</p>
+<h2 id="我自己写了点git使用-命令，基本满足运维需求。"><a href="#我自己写了点git使用-命令，基本满足运维需求。" class="headerlink" title="我自己写了点git使用 命令，基本满足运维需求。"></a>我自己写了点git使用 命令，基本满足运维需求。</h2><p>之所以选择命令操作，因为工具各异，<br>1  命令是运维基本需要的，我们调试什么大多用不上有界面的工具。<br>2  工具各异本质都是命令，命令修复也是是大招了。</p>
+<h2 id="git特点"><a href="#git特点" class="headerlink" title="git特点:"></a>git特点:</h2><p>  分布式代码管理</p>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> git checkout -b dev</span><br><span class="line">切换到一个新分支 <span class="string">&#x27;dev&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="命令查看当前分支"><a href="#命令查看当前分支" class="headerlink" title="命令查看当前分支"></a>命令查看当前分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git branch</span><br><span class="line">* dev</span><br><span class="line">  main</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<p>git branch命令会列出所有分支，当前分支前面会标一个*号。</p>
+<h3 id="创建文件-提交过程。"><a href="#创建文件-提交过程。" class="headerlink" title="创建文件 提交过程。"></a>创建文件 提交过程。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">touch readme.txt</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ git status</span><br><span class="line">位于分支 dev</span><br><span class="line">未跟踪的文件:</span><br><span class="line">  （使用 <span class="string">&quot;git add &lt;文件&gt;...&quot;</span> 以包含要提交的内容）</span><br><span class="line">	readme.txt</span><br></pre></td></tr></table></figure>
+<p>加入git代码管理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> git status</span><br><span class="line">位于分支 dev</span><br><span class="line">要提交的变更：</span><br><span class="line">  （使用 <span class="string">&quot;git restore --staged &lt;文件&gt;...&quot;</span> 以取消暂存）</span><br><span class="line">	新文件：   readme.txt</span><br></pre></td></tr></table></figure>
+<p>提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git commit -m <span class="string">&quot;add readme.txt dev&quot;</span></span><br><span class="line">[dev 18f7897] add readme.txt dev</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
+<h6 id="note-git-commit-是到-本地代码库-分布式代码管理特点-，git-push-才是推到公共某个分支。"><a href="#note-git-commit-是到-本地代码库-分布式代码管理特点-，git-push-才是推到公共某个分支。" class="headerlink" title="note: git commit 是到 本地代码库(分布式代码管理特点)，git push 才是推到公共某个分支。"></a>note: git commit 是到 <font color="orange">本地</font>代码库(分布式代码管理特点)，git push 才是推到公共某个分支。</h6><h3 id="merge-示例："><a href="#merge-示例：" class="headerlink" title="merge 示例："></a>merge 示例：</h3><p>切换到master分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">切换到分支 <span class="string">&#x27;master&#x27;</span></span><br><span class="line">您的分支与上游分支 <span class="string">&#x27;origin/master&#x27;</span> 一致。</span><br><span class="line">ls</span><br><span class="line">2021		archives	css		fancybox	index.html	js</span><br></pre></td></tr></table></figure>
+<h6 id="note-我们可以看到-readme-txt-不见了，对的，因为这个文件在dev分支上创建的。"><a href="#note-我们可以看到-readme-txt-不见了，对的，因为这个文件在dev分支上创建的。" class="headerlink" title="note: 我们可以看到 readme.txt 不见了，对的，因为这个文件在dev分支上创建的。"></a>note: 我们可以看到 readme.txt 不见了，对的，因为这个文件在dev分支上创建的。</h6><p>把dev分支的 到master分支上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br><span class="line">更新 ef4b081..18f7897</span><br><span class="line">Fast-forward</span><br><span class="line"> readme.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 readme.txt</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ ls</span><br><span class="line">2021		archives	css		fancybox	index.html	js		readme.txt</span><br></pre></td></tr></table></figure>
+<h6 id="可以看到-readme-txt-merge过来了。"><a href="#可以看到-readme-txt-merge过来了。" class="headerlink" title="可以看到 readme.txt merge过来了。"></a>可以看到 readme.txt merge过来了。</h6><h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支:"></a>删除分支:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> git branch -d dev</span><br><span class="line">已删除分支 dev（曾为 18f7897）。</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ git branch</span><br><span class="line">  main</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+<p>可以看到dev 分支删除了， 只剩下master和main 分支。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/09/use-git/" data-id="ckm1opmu10000bt6day1pdoa5" data-title="use git" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/09/use-git/" data-id="ckm1opmu10000bt6day1pdoa5" data-title="use git" class="article-share-link">Share</a>
       
       
       
@@ -151,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/09/hello-world/" data-id="ckm1izmb80001706d9ype4bhc" data-title="Hello World" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/09/hello-world/" data-id="ckm1izmb80001706d9ype4bhc" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -193,7 +210,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li></ul>
     </div>
@@ -203,7 +220,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
