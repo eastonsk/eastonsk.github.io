@@ -225,46 +225,8 @@
 <h3 id="使用范例："><a href="#使用范例：" class="headerlink" title="使用范例："></a>使用范例：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python 3.8.7 (default, Mar  5 2021, 14:46:44) </span><br><span class="line">[Clang 12.0.0 (clang-1200.0.32.29)] on darwin</span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> or <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; from selenium import webdriver</span><br><span class="line">&gt;&gt;&gt; driver = webdriver.Chrome()</span><br></pre></td></tr></table></figure>
 <p>这样就会自动打开浏览器： chromedriver</p>
 <h3 id="一个从网站登录截图范例："><a href="#一个从网站登录截图范例：" class="headerlink" title="一个从网站登录截图范例："></a>一个从网站登录截图范例：</h3><p>完整代码如下:</p>
-<pre><code class="bash">from selenium import webdriver
-
-def getimage(image):
-    image = image
-    driver = webdriver.Chrome()
-    driver.get(&quot;http:/ab.com/&quot;)
-    driver.find_element_by_id(&quot;username&quot;).send_keys(&quot;username&quot;)
-    driver.find_element_by_id(&quot;password&quot;).send_keys(&quot;passwd&quot;)
-    driver.find_element_by_class_name(&quot;btn-primary&quot;).click()
-    driver.get(image[&#39;url&#39;])
-    imgelement = driver.find_element_by_xpath(image[&#39;imgeid&#39;])  # 定位
-    location = imgelement.location  # 获取验证码x,y轴坐标
-    size = imgelement.size            # 获取图片的长宽    
-    rangle = (int(location[&#39;x&#39;]), 
-              int(location[&#39;y&#39;]), 
-              int(location[&#39;x&#39;] + size[&#39;width&#39;]),
-              int(location[&#39;y&#39;] + size[&#39;height&#39;]))  # 写成我们需要截取的位置坐标
-    driver.save_screenshot(image[&#39;image&#39;]) 
-    i = Image.open(savefile)  # 打开截图
-    frame4 = i.convert(&#39;RGB&#39;)
-    frame4 = i.crop(rangle)  # 使用Image的crop函数，从截图中再次截取我们需要的区域
-    frame4.save(savefile) # 保存我们接下来的图片
-
-
-def main(imgdir):
-    images = &#123;
-        &quot;cap1&quot;:&#123;
-        &quot;url&quot;:  &#39;http://abc.com/cmf/home&#39;,
-        &quot;imgeid&quot;:&#39;//*[@id=&quot;charts-view-id&quot;]/div[1]&#39;,
-        &quot;image&quot;:&#39;%simage1.png&#39;% imgdir,
-        &#125;,
-    &#125;
-    getimage(images[&#39;cap1&#39;])
-
-
-
-
-if __name__ == &#39;__main__&#39;:
-    main(&#39;report/imgs/&#39;)  
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line"></span><br><span class="line">def getimage(image):</span><br><span class="line">    image = image</span><br><span class="line">    driver = webdriver.Chrome()</span><br><span class="line">    driver.get(<span class="string">&quot;http:/ab.com/&quot;</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">&quot;username&quot;</span>).send_keys(<span class="string">&quot;username&quot;</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">&quot;password&quot;</span>).send_keys(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line">    driver.find_element_by_class_name(<span class="string">&quot;btn-primary&quot;</span>).click()</span><br><span class="line">    driver.get(image[<span class="string">&#x27;url&#x27;</span>])</span><br><span class="line">    imgelement = driver.find_element_by_xpath(image[<span class="string">&#x27;imgeid&#x27;</span>])  <span class="comment"># 定位</span></span><br><span class="line">    location = imgelement.location  <span class="comment"># 获取验证码x,y轴坐标</span></span><br><span class="line">    size = imgelement.size            <span class="comment"># 获取图片的长宽    </span></span><br><span class="line">    rangle = (int(location[<span class="string">&#x27;x&#x27;</span>]), </span><br><span class="line">              int(location[<span class="string">&#x27;y&#x27;</span>]), </span><br><span class="line">              int(location[<span class="string">&#x27;x&#x27;</span>] + size[<span class="string">&#x27;width&#x27;</span>]),</span><br><span class="line">              int(location[<span class="string">&#x27;y&#x27;</span>] + size[<span class="string">&#x27;height&#x27;</span>]))  <span class="comment"># 写成我们需要截取的位置坐标</span></span><br><span class="line">    driver.save_screenshot(image[<span class="string">&#x27;image&#x27;</span>]) </span><br><span class="line">    i = Image.open(savefile)  <span class="comment"># 打开截图</span></span><br><span class="line">    frame4 = i.convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line">    frame4 = i.crop(rangle)  <span class="comment"># 使用Image的crop函数，从截图中再次截取我们需要的区域</span></span><br><span class="line">    frame4.save(savefile) <span class="comment"># 保存我们接下来的图片</span></span><br><span class="line">    driver.close()</span><br><span class="line"></span><br><span class="line">def main(imgdir):</span><br><span class="line">    images = &#123;</span><br><span class="line">        <span class="string">&quot;cap1&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;url&quot;</span>:  <span class="string">&#x27;http://abc.com/cmf/home&#x27;</span>,</span><br><span class="line">        <span class="string">&quot;imgeid&quot;</span>:<span class="string">&#x27;//*[@id=&quot;charts-view-id&quot;]/div[1]&#x27;</span>,</span><br><span class="line">        <span class="string">&quot;image&quot;</span>:<span class="string">&#x27;%simage1.png&#x27;</span>% imgdir,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    getimage(images[<span class="string">&#x27;cap1&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main(<span class="string">&#x27;report/imgs/&#x27;</span>)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>note: 定位元素 find_element_by_xpath，可以从浏览器调试模式复制出定位，比较便捷。</p>
 
     </div>
 
@@ -356,7 +318,7 @@ if __name__ == &#39;__main__&#39;:
     <div class="widget notification">
         <h3 class="title">网站公告</h3>
         <div>
-            <p>Welcome to eaton stack .... <br/>
+            <p>Welcome to easton stack .... <br/>
 
 <hr/>接受赞助服务！如果你觉得本站内容对你有帮助，就赞助下呗(≥◇≤) <br/>赞助地址：<a target="_blank" rel="noopener" href="http://tycn.51rgb.cn/static/img/alipay_donate.png">我要赞助下</a>
 </p>
@@ -401,7 +363,7 @@ if __name__ == &#39;__main__&#39;:
         
     <div class="widget">
         <h3 class="title">Categories</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/os/"><i class="fa" aria-hidden="true">os</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/"><i class="fa" aria-hidden="true">python</i></a><span class="category-list-count">2</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/mt/"><i class="fa" aria-hidden="true">mt</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/os/"><i class="fa" aria-hidden="true">os</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/"><i class="fa" aria-hidden="true">python</i></a><span class="category-list-count">2</span></li></ul>
     </div>
 
 
@@ -409,7 +371,7 @@ if __name__ == &#39;__main__&#39;:
         
     <div class="widget">
       <h3 class="title">Archives</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/"><i class="fa" aria-hidden="true">三月 2021</i></a><span class="archive-list-count">6</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/"><i class="fa" aria-hidden="true">三月 2021</i></a><span class="archive-list-count">8</span></li></ul>
     </div>
 
 
@@ -418,7 +380,7 @@ if __name__ == &#39;__main__&#39;:
   <div class="widget">
     <h3 class="title">Tag Cloud</h3>
     <div class="content tag-cloud">
-        <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/linux%E6%97%8F%E7%B3%BB/" style="font-size: 10px;">linux族系</a> <a href="/tags/os/" style="font-size: 10px;">os</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 10px;">文件操作</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">自动化测试</a>
+        <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/key/" style="font-size: 10px;">key</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/linux%E6%97%8F%E7%B3%BB/" style="font-size: 10px;">linux族系</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/os/" style="font-size: 10px;">os</a> <a href="/tags/pyenv/" style="font-size: 10px;">pyenv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python%E7%89%88%E6%9C%AC/" style="font-size: 10px;">python版本</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" style="font-size: 10px;">免密登录</a> <a href="/tags/%E5%AF%86%E9%92%A5/" style="font-size: 10px;">密钥</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 10px;">文件操作</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">自动化测试</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">项目环境</a>
     </div>
   </div>
 
