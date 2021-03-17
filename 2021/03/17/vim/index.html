@@ -446,7 +446,20 @@
 <td>将第一行至第10行之间的abc替换成123</td>
 </tr>
 </tbody></table>
-<h3 id="3-操作"><a href="#3-操作" class="headerlink" title="3  操作"></a>3  操作</h3>
+<h3 id="3-操作"><a href="#3-操作" class="headerlink" title="3  操作"></a>3  操作</h3><p>3.1 关于操作显示<br>set nu   显示行数 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 38     system <span class="string">&quot;make&quot;</span>, <span class="string">&quot;install&quot;</span></span><br><span class="line"> 39   end</span><br><span class="line"> 40 end</span><br><span class="line"> 41                                         </span><br><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   system <span class="string">&quot;./configure&quot;</span>, <span class="string">&quot;--prefix=#&#123;prefix&#125;&quot;</span></span><br><span class="line">    system <span class="string">&quot;make&quot;</span>, <span class="string">&quot;install&quot;</span></span><br><span class="line">  end </span><br><span class="line">end                                          </span><br><span class="line">:<span class="built_in">set</span> nonu</span><br></pre></td></tr></table></figure>
+<p>取消行数</p>
+<p>3.2  编辑进去<br>o  增加行数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">45 ccccc</span><br><span class="line">46 </span><br><span class="line">47 dddd</span><br><span class="line">48 abcsadfsad</span><br><span class="line">49 abc</span><br></pre></td></tr></table></figure>
+<p>O  向上增加一样</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ccccc</span><br><span class="line">46 </span><br><span class="line">47 dddd</span><br><span class="line">48 </span><br><span class="line">49 abcsadfsad</span><br><span class="line">50 abc</span><br></pre></td></tr></table></figure>
+<p>3.3 替换操作范例<br>11替换成ss </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> 49 abcsadfsad</span><br><span class="line"> 50 abc</span><br><span class="line"> 51 123</span><br><span class="line"> 52 1111</span><br><span class="line"> 53 11aa</span><br><span class="line"> 54 4444</span><br><span class="line"> 55 6666</span><br><span class="line">:%s/11/ss/g</span><br></pre></td></tr></table></figure>
+<p>替换后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">48 </span><br><span class="line"> 49 abcsadfsad</span><br><span class="line"> 50 abc</span><br><span class="line"> 51 123</span><br><span class="line"> 52 ssss</span><br><span class="line"> 53 ssaa</span><br><span class="line"> 54 4444</span><br><span class="line"> 55 6666</span><br><span class="line">3 substitutions on 2 lines</span><br></pre></td></tr></table></figure>
+<p>结果2行，替换成3次，会发发现 1111 变成ssss。</p>
+
     </div>
 
     <div class="post-footer">
