@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>Tag: git | easton stack</title>
+<title>编辑器vim介绍 | easton stack</title>
 
 
     <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
@@ -140,38 +140,356 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="编辑器vim介绍">
+            
+	            编辑器vim介绍
+            
+        </h1>
+        <div class="post-meta">
     
-        git 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/os">
+            os
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/os" title='os'>
+                        os
+                    </a>
+                
+                    <a href="/tags/vim" title='vim'>
+                        vim
+                    </a>
+                
+            
+        </span>
+    </span>
+    
 
-    <article class="post">
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2021/03/09/use-git/">use git</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2021年03月09日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    目录1 Git 基本介绍2 GIt 命令介绍3 Git 使用范例
-一、介绍1、git特点:  分布式代码管理2、本次git培训规范:最大收获是这个了大家知晓下：开发环境分支: dev测试环境分支: master生产发布分支: rele...
-                
-            </p> 
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2021/03/17</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h3 id="vim介绍"><a href="#vim介绍" class="headerlink" title="vim介绍"></a>vim介绍</h3><p>能强大、高度可定制的文本编辑器，曾经Slashdot Beanie的最佳开放源代码文本编辑器大奖。<br>在linux下掌握一项强大的编辑器对我们也是很有必要的，所以推荐大家好好使用下。</p>
+<h3 id="1-vim-工作模式"><a href="#1-vim-工作模式" class="headerlink" title="1 vim 工作模式"></a>1 vim 工作模式</h3><table>
+<thead>
+<tr>
+<th>模式介绍</th>
+<th>进入方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令行模式</td>
+<td>不管用户处于何种模式，只要按一下ESC键</td>
+<td>命令行</td>
+</tr>
+<tr>
+<td>文本输入模式</td>
+<td>命令模式下输入 i、a、o、c、r</td>
+<td>需要编辑到</td>
+</tr>
+<tr>
+<td>末行模式</td>
+<td>在命令模式下，用户按”:””</td>
+<td>末行模式 可以设置 显示行数等操作等</td>
+</tr>
+</tbody></table>
+<h3 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2 常用命令"></a>2 常用命令</h3><table>
+<thead>
+<tr>
+<th>常用类操作</th>
+<th>操作方法</th>
+<th>功能和用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>进入编辑</td>
+<td>i</td>
+<td>插入光标前一个字符</td>
+</tr>
+<tr>
+<td>进入编辑</td>
+<td>I</td>
+<td>插入行首</td>
+</tr>
+<tr>
+<td>进入编辑</td>
+<td>a</td>
+<td>插入光标后一个字符</td>
+</tr>
+<tr>
+<td>进入编辑</td>
+<td>A</td>
+<td>插入行未</td>
+</tr>
+<tr>
+<td>进入编辑</td>
+<td>o</td>
+<td>向下新开一行,插入行首</td>
+</tr>
+<tr>
+<td>进入编辑</td>
+<td>O</td>
+<td>向上新开一行,插入行首</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>h</td>
+<td>左移</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>j</td>
+<td>下移</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>k</td>
+<td>上移</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>l</td>
+<td>右移</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>M</td>
+<td>光标移动到中间行</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>L</td>
+<td>光标移动到屏幕最后一行行首</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>G</td>
+<td>移动到指定行,行号 -G</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>w</td>
+<td>向后一次移动一个字</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>b</td>
+<td>向前一次移动一个字</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>{</td>
+<td>按段移动,上移</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>}</td>
+<td>按段移动,下移</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>Ctr-d</td>
+<td>向下翻半屏</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>Ctr-u</td>
+<td>向上翻半屏</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>Ctr-f</td>
+<td>向下翻一屏</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>Ctr-b</td>
+<td>向上翻一屏</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>gg</td>
+<td>光标移动文件开头</td>
+</tr>
+<tr>
+<td>移动光标操作</td>
+<td>G</td>
+<td>光标移动到文件末尾</td>
+</tr>
+<tr>
+<td>删除相关操作</td>
+<td>x</td>
+<td>删除光标后一个字符,相当于</td>
+</tr>
+<tr>
+<td>删除相关操作</td>
+<td>Del</td>
+<td>X: 删除光标前一个字符,相当于 Backspace</td>
+</tr>
+<tr>
+<td>删除相关操作</td>
+<td>dd</td>
+<td>删除光标所在行,n dd 删除指定的行数</td>
+</tr>
+<tr>
+<td>删除相关操作</td>
+<td>D</td>
+<td>删除光标后本行所有内容,包含光标所在字符</td>
+</tr>
+<tr>
+<td>删除相关操作</td>
+<td>d0</td>
+<td>删除光标前本行所有内容,不包含光标所在字符</td>
+</tr>
+<tr>
+<td>删除相关操作</td>
+<td>dw</td>
+<td>删除光标开始位置的字,包含光标所在字符</td>
+</tr>
+<tr>
+<td>撤销命令</td>
+<td>u</td>
+<td>一步一步撤销</td>
+</tr>
+<tr>
+<td>撤销命令</td>
+<td>Ctr-r</td>
+<td>反撤销</td>
+</tr>
+<tr>
+<td>重复命令</td>
+<td>.</td>
+<td>重复上一次操作的命令</td>
+</tr>
+<tr>
+<td>重复命令</td>
+<td>n<command></td>
+<td>重复某个命令 n 次，</td>
+</tr>
+<tr>
+<td>复制粘贴</td>
+<td>yy</td>
+<td>复制当前行,</td>
+</tr>
+<tr>
+<td>复制粘贴</td>
+<td>n yy</td>
+<td>复制 n 行</td>
+</tr>
+<tr>
+<td>复制粘贴</td>
+<td>p</td>
+<td>在光标所在位置向下新开辟一行,粘贴</td>
+</tr>
+<tr>
+<td>可视模式</td>
+<td>v</td>
+<td>按字符移动,选中文本</td>
+</tr>
+<tr>
+<td>可视模式</td>
+<td>V</td>
+<td>按行移动,选中文本可视模式可以配合</td>
+</tr>
+<tr>
+<td>可视模式</td>
+<td>d, y, &gt;&gt;, &lt;&lt;</td>
+<td>实现对文本块的删除,复制,左右移动</td>
+</tr>
+<tr>
+<td>替换操作</td>
+<td>/</td>
+<td>str查找</td>
+</tr>
+<tr>
+<td>替换操作</td>
+<td>n</td>
+<td>下一个</td>
+</tr>
+<tr>
+<td>替换操作</td>
+<td>N</td>
+<td>上一个</td>
+</tr>
+<tr>
+<td>替换命令</td>
+<td>:%s/abc/123/g</td>
+<td>把abc全部替换成123</td>
+</tr>
+<tr>
+<td>替换命令</td>
+<td>:1, 10s/abc/123/g</td>
+<td>将第一行至第10行之间的abc替换成123</td>
+</tr>
+</tbody></table>
+<h3 id="3-操作"><a href="#3-操作" class="headerlink" title="3  操作"></a>3  操作</h3>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">easton stack</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2021/03/16/keys/" class="next-post btn btn-default" title='密钥使用'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">密钥使用</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC81MjkyNi8yOTQwMw==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
 
 
 
