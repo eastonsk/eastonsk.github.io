@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>自动化测试/自动截图 | easton stack</title>
+<title>Tag: 自动报表 | easton stack</title>
 
 
     <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
@@ -144,142 +144,37 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="自动化测试/自动截图">
-            
-	            自动化测试/自动截图
-            
-        </h1>
-        <div class="post-meta">
+                <main class="col-md-8 main-content ">
+                    <h3> 
+    
+        自动报表 
     
     
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/python">
-            python
-        </a>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-                
-                    <a href="/tags/python" title='python'>
-                        python
-                    </a>
-                
-                    <a href="/tags/selenium" title='selenium'>
-                        selenium
-                    </a>
-                
-                    <a href="/tags/自动化测试" title='自动化测试'>
-                        自动化测试
-                    </a>
-                
-            
-        </span>
-    </span>
-    
+</h3>
 
-    
+    <article class="post">
         
-        <span class="fa-wrap">
-            <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2021/03/15</span>
-        </span>
-    
-</div>
-
-            
-            
-    </div>
-    
-    <div class="post-body post-content">
-        <h3 id="selenium-介绍"><a href="#selenium-介绍" class="headerlink" title="selenium 介绍:"></a>selenium 介绍:</h3><p>python 关于浏览器自动化自动化交互操作库:<br>The selenium package is used to automate web browser interaction from Python.<br>官网地址: <a target="_blank" rel="noopener" href="https://pypi.org/project/selenium/">https://pypi.org/project/selenium/</a></p>
-<h3 id="selenium-使用场景和注意事项："><a href="#selenium-使用场景和注意事项：" class="headerlink" title="selenium 使用场景和注意事项："></a>selenium 使用场景和注意事项：</h3><p>使用场景： 自动化测试 爬虫等(自动化)。<br>注意：     新版本的Selenium不再支持 PhantomJS</p>
-<table>
-<thead>
-<tr>
-<th>支撑浏览器:</th>
-<th>开发文档</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Chrome:</td>
-<td><a target="_blank" rel="noopener" href="https://sites.google.com/a/chromium.org/chromedriver/downloads">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></td>
-</tr>
-<tr>
-<td>Edge:</td>
-<td><a target="_blank" rel="noopener" href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</a></td>
-</tr>
-<tr>
-<td>Firefox:</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></td>
-</tr>
-<tr>
-<td>Safari:</td>
-<td><a target="_blank" rel="noopener" href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">https://webkit.org/blog/6900/webdriver-support-in-safari-10/</a></td>
-</tr>
-</tbody></table>
-<h3 id="使用范例："><a href="#使用范例：" class="headerlink" title="使用范例："></a>使用范例：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python 3.8.7 (default, Mar  5 2021, 14:46:44) </span><br><span class="line">[Clang 12.0.0 (clang-1200.0.32.29)] on darwin</span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> or <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; from selenium import webdriver</span><br><span class="line">&gt;&gt;&gt; driver = webdriver.Chrome()</span><br></pre></td></tr></table></figure>
-<p>这样就会自动打开浏览器： chromedriver</p>
-<h3 id="一个从网站登录截图范例："><a href="#一个从网站登录截图范例：" class="headerlink" title="一个从网站登录截图范例："></a>一个从网站登录截图范例：</h3><p>完整代码如下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line"></span><br><span class="line">def getimage(image):</span><br><span class="line">    image = image</span><br><span class="line">    driver = webdriver.Chrome()</span><br><span class="line">    driver.get(<span class="string">&quot;http:/ab.com/&quot;</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">&quot;username&quot;</span>).send_keys(<span class="string">&quot;username&quot;</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">&quot;password&quot;</span>).send_keys(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line">    driver.find_element_by_class_name(<span class="string">&quot;btn-primary&quot;</span>).click()</span><br><span class="line">    driver.get(image[<span class="string">&#x27;url&#x27;</span>])</span><br><span class="line">    imgelement = driver.find_element_by_xpath(image[<span class="string">&#x27;imgeid&#x27;</span>])  <span class="comment"># 定位</span></span><br><span class="line">    location = imgelement.location  <span class="comment"># 获取验证码x,y轴坐标</span></span><br><span class="line">    size = imgelement.size            <span class="comment"># 获取图片的长宽    </span></span><br><span class="line">    rangle = (int(location[<span class="string">&#x27;x&#x27;</span>]), </span><br><span class="line">              int(location[<span class="string">&#x27;y&#x27;</span>]), </span><br><span class="line">              int(location[<span class="string">&#x27;x&#x27;</span>] + size[<span class="string">&#x27;width&#x27;</span>]),</span><br><span class="line">              int(location[<span class="string">&#x27;y&#x27;</span>] + size[<span class="string">&#x27;height&#x27;</span>]))  <span class="comment"># 写成我们需要截取的位置坐标</span></span><br><span class="line">    driver.save_screenshot(image[<span class="string">&#x27;image&#x27;</span>]) </span><br><span class="line">    i = Image.open(savefile)  <span class="comment"># 打开截图</span></span><br><span class="line">    frame4 = i.convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line">    frame4 = i.crop(rangle)  <span class="comment"># 使用Image的crop函数，从截图中再次截取我们需要的区域</span></span><br><span class="line">    frame4.save(savefile) <span class="comment"># 保存我们接下来的图片</span></span><br><span class="line">    driver.close()</span><br><span class="line"></span><br><span class="line">def main(imgdir):</span><br><span class="line">    images = &#123;</span><br><span class="line">        <span class="string">&quot;cap1&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;url&quot;</span>:  <span class="string">&#x27;http://abc.com/cmf/home&#x27;</span>,</span><br><span class="line">        <span class="string">&quot;imgeid&quot;</span>:<span class="string">&#x27;//*[@id=&quot;charts-view-id&quot;]/div[1]&#x27;</span>,</span><br><span class="line">        <span class="string">&quot;image&quot;</span>:<span class="string">&#x27;%simage1.png&#x27;</span>% imgdir,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    getimage(images[<span class="string">&#x27;cap1&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main(<span class="string">&#x27;report/imgs/&#x27;</span>)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>note: 定位元素 find_element_by_xpath，可以从浏览器调试模式复制出定位，比较便捷。</p>
-
-    </div>
-
-    <div class="post-footer">
-        <div>
-            
-                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">easton stack</a>
-            
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2021/03/15/readme/">自动报表说明</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2021年03月15日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    1、文件说明:1  bigdata_check.py                程序文件2  biddatacheck-template.docx      报表模板3  require.txt                  ...
+                
+            </p> 
         </div>
-        <div>
-            
-        </div>
-    </div>
-</article>
-
-<div class="article-nav prev-next-wrap clearfix">
-    
-        <a href="/2021/03/16/pyenv/" class="pre-post btn btn-default" title='PYENV-项目环境管理'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">PYENV-项目环境管理</span>
-        </a>
-    
-    
-        <a href="/2021/03/15/readme/" class="next-post btn btn-default" title='自动报表说明'>
-            <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">自动报表说明</span><i class="fa fa-angle-right fa-fw"></i>
-        </a>
-    
-</div>
+    </article>
+ 
 
 
-    <div id="comments">
-        
-	
-<div id="lv-container" data-id="city" data-uid="MTAyMC81MjkyNi8yOTQwMw==">
-  <script type="text/javascript">
-     (function(d, s) {
-         var j, e = d.getElementsByTagName(s)[0];
-         if (typeof LivereTower === 'function') { return; }
-         j = d.createElement(s);
-         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-         j.async = true;
-         e.parentNode.insertBefore(j, e);
-     })(document, 'script');
-  </script>
-</div>
-
-
-    </div>
 
 
 

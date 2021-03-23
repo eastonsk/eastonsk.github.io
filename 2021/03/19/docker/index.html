@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>自动化测试/自动截图 | easton stack</title>
+<title>容器镜像的导出导入 | easton stack</title>
 
 
     <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
@@ -148,9 +148,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="自动化测试/自动截图">
+        <h1 id="容器镜像的导出导入">
             
-	            自动化测试/自动截图
+	            容器镜像的导出导入
             
         </h1>
         <div class="post-meta">
@@ -158,8 +158,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/python">
-            python
+        <a href="/categories/docker">
+            docker
         </a>
     </span>
     
@@ -169,16 +169,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/python" title='python'>
-                        python
-                    </a>
-                
-                    <a href="/tags/selenium" title='selenium'>
-                        selenium
-                    </a>
-                
-                    <a href="/tags/自动化测试" title='自动化测试'>
-                        自动化测试
+                    <a href="/tags/容器" title='容器'>
+                        容器
                     </a>
                 
             
@@ -190,7 +182,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2021/03/15</span>
+            <span class="date-meta">2021/03/19</span>
         </span>
     
 </div>
@@ -200,38 +192,122 @@
     </div>
     
     <div class="post-body post-content">
-        <h3 id="selenium-介绍"><a href="#selenium-介绍" class="headerlink" title="selenium 介绍:"></a>selenium 介绍:</h3><p>python 关于浏览器自动化自动化交互操作库:<br>The selenium package is used to automate web browser interaction from Python.<br>官网地址: <a target="_blank" rel="noopener" href="https://pypi.org/project/selenium/">https://pypi.org/project/selenium/</a></p>
-<h3 id="selenium-使用场景和注意事项："><a href="#selenium-使用场景和注意事项：" class="headerlink" title="selenium 使用场景和注意事项："></a>selenium 使用场景和注意事项：</h3><p>使用场景： 自动化测试 爬虫等(自动化)。<br>注意：     新版本的Selenium不再支持 PhantomJS</p>
+        <h2 id="容器基础"><a href="#容器基础" class="headerlink" title="容器基础"></a>容器基础</h2><p>   作为系统运维，不可避免的遇到容器相关问题，所以了解容器的一些基本命令也是基本素养。<br>介绍几个基本的关于，运维场景中所需要的操作命令。</p>
+<h3 id="一、容器和镜像的导出何导入操作。"><a href="#一、容器和镜像的导出何导入操作。" class="headerlink" title="一、容器和镜像的导出何导入操作。"></a>一、容器和镜像的导出何导入操作。</h3><pre><code>在没有hub场景或者网络情况下，对容器何镜像的操作，只有回归最原始的文件模式，即：导出导入的基本方法。
+</code></pre>
 <table>
 <thead>
 <tr>
-<th>支撑浏览器:</th>
-<th>开发文档</th>
+<th>类型</th>
+<th>命令</th>
+<th>用途</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Chrome:</td>
-<td><a target="_blank" rel="noopener" href="https://sites.google.com/a/chromium.org/chromedriver/downloads">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></td>
+<td>镜像操作</td>
+<td>docker images</td>
+<td>列出本地容器镜像</td>
 </tr>
 <tr>
-<td>Edge:</td>
-<td><a target="_blank" rel="noopener" href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</a></td>
+<td>镜像操作</td>
+<td>docker save -o test.tar image_name</td>
+<td>打包备份镜像为文件</td>
 </tr>
 <tr>
-<td>Firefox:</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></td>
+<td>镜像操作</td>
+<td>docker load  -i(–input)  /test.tar</td>
+<td>从镜像文件导入镜像</td>
 </tr>
 <tr>
-<td>Safari:</td>
-<td><a target="_blank" rel="noopener" href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">https://webkit.org/blog/6900/webdriver-support-in-safari-10/</a></td>
+<td>容器操作</td>
+<td>docker export [-o</td>
+<td>–output[=””]] CONTATINER</td>
+</tr>
+<tr>
+<td>容器操作</td>
+<td>docker export 容器id/name &gt;文件名.tar</td>
+<td>容器导出 范例</td>
+</tr>
+<tr>
+<td>容器操作</td>
+<td>docker export -o test.img test</td>
+<td>容器导出 范例</td>
+</tr>
+<tr>
+<td>容器操作</td>
+<td>docker import -o test.img test</td>
+<td>用来载入容器包，导入后是镜像</td>
 </tr>
 </tbody></table>
-<h3 id="使用范例："><a href="#使用范例：" class="headerlink" title="使用范例："></a>使用范例：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python 3.8.7 (default, Mar  5 2021, 14:46:44) </span><br><span class="line">[Clang 12.0.0 (clang-1200.0.32.29)] on darwin</span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> or <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; from selenium import webdriver</span><br><span class="line">&gt;&gt;&gt; driver = webdriver.Chrome()</span><br></pre></td></tr></table></figure>
-<p>这样就会自动打开浏览器： chromedriver</p>
-<h3 id="一个从网站登录截图范例："><a href="#一个从网站登录截图范例：" class="headerlink" title="一个从网站登录截图范例："></a>一个从网站登录截图范例：</h3><p>完整代码如下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line"></span><br><span class="line">def getimage(image):</span><br><span class="line">    image = image</span><br><span class="line">    driver = webdriver.Chrome()</span><br><span class="line">    driver.get(<span class="string">&quot;http:/ab.com/&quot;</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">&quot;username&quot;</span>).send_keys(<span class="string">&quot;username&quot;</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">&quot;password&quot;</span>).send_keys(<span class="string">&quot;passwd&quot;</span>)</span><br><span class="line">    driver.find_element_by_class_name(<span class="string">&quot;btn-primary&quot;</span>).click()</span><br><span class="line">    driver.get(image[<span class="string">&#x27;url&#x27;</span>])</span><br><span class="line">    imgelement = driver.find_element_by_xpath(image[<span class="string">&#x27;imgeid&#x27;</span>])  <span class="comment"># 定位</span></span><br><span class="line">    location = imgelement.location  <span class="comment"># 获取验证码x,y轴坐标</span></span><br><span class="line">    size = imgelement.size            <span class="comment"># 获取图片的长宽    </span></span><br><span class="line">    rangle = (int(location[<span class="string">&#x27;x&#x27;</span>]), </span><br><span class="line">              int(location[<span class="string">&#x27;y&#x27;</span>]), </span><br><span class="line">              int(location[<span class="string">&#x27;x&#x27;</span>] + size[<span class="string">&#x27;width&#x27;</span>]),</span><br><span class="line">              int(location[<span class="string">&#x27;y&#x27;</span>] + size[<span class="string">&#x27;height&#x27;</span>]))  <span class="comment"># 写成我们需要截取的位置坐标</span></span><br><span class="line">    driver.save_screenshot(image[<span class="string">&#x27;image&#x27;</span>]) </span><br><span class="line">    i = Image.open(savefile)  <span class="comment"># 打开截图</span></span><br><span class="line">    frame4 = i.convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line">    frame4 = i.crop(rangle)  <span class="comment"># 使用Image的crop函数，从截图中再次截取我们需要的区域</span></span><br><span class="line">    frame4.save(savefile) <span class="comment"># 保存我们接下来的图片</span></span><br><span class="line">    driver.close()</span><br><span class="line"></span><br><span class="line">def main(imgdir):</span><br><span class="line">    images = &#123;</span><br><span class="line">        <span class="string">&quot;cap1&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;url&quot;</span>:  <span class="string">&#x27;http://abc.com/cmf/home&#x27;</span>,</span><br><span class="line">        <span class="string">&quot;imgeid&quot;</span>:<span class="string">&#x27;//*[@id=&quot;charts-view-id&quot;]/div[1]&#x27;</span>,</span><br><span class="line">        <span class="string">&quot;image&quot;</span>:<span class="string">&#x27;%simage1.png&#x27;</span>% imgdir,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    getimage(images[<span class="string">&#x27;cap1&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main(<span class="string">&#x27;report/imgs/&#x27;</span>)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>note: 定位元素 find_element_by_xpath，可以从浏览器调试模式复制出定位，比较便捷。</p>
+<p>容器和镜像导出导入对比</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>类别</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存镜像</td>
+<td>docker save</td>
+<td>导出镜像 image</td>
+</tr>
+<tr>
+<td>存容器</td>
+<td>docker export</td>
+<td>导出镜像 保存的是容器（container）</td>
+</tr>
+<tr>
+<td>载入镜像</td>
+<td>docker load</td>
+<td>用来载入镜像包，image  恢复为镜像</td>
+</tr>
+<tr>
+<td>载入容器包</td>
+<td>docker import</td>
+<td>用来载入容器包，  恢复为镜像</td>
+</tr>
+</tbody></table>
+<pre><code> 容器和镜像操作对比，导出导入对比。docker save保存的是镜像（image），docker export 保存的是容器（container）；用来载入镜像包，docker import 用来载入容器包，但两者都会恢复为镜像；docker load不能对载入的镜像重命名，而docker import可以为镜像指定新名称。
+</code></pre>
+<p>二、 容器的启动何进入：<br>1 启动：<br>docker run -d –name container_test –privileged -it test:latest /usr/sbin/init<br>2 进入镜像：<br>docker exec -it container_test /bin/bash</p>
+<p>三、镜像使用：</p>
+<pre><code>  使用私服一般会遇到安全问题:
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/docker/daemon.json </span><br><span class="line">&#123;</span><br><span class="line">   <span class="string">&quot;insecure-registries&quot;</span>:[<span class="string">&quot;ip1:5000&quot;</span>,<span class="string">&quot;ip2:5048&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>本地镜像推到私服上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker tag docker.io/mysql:5.7   47.107.154.32:5000/mysql</span><br><span class="line">docker push 47.107.154.32:5000/mysql</span><br><span class="line"></span><br><span class="line">docker tag  本地镜完整像名(或者id也可以)  8.135.130.180:5000/yida/news:latest</span><br><span class="line">docker push  8.135.130.180:5000/yida/news:latest</span><br></pre></td></tr></table></figure>
+
+<p>四、容器镜像的使用：<br>docker pull 10.60.164.31:5000/docker-registry-frontend:latest<br>docker tag </p>
+<p>五、几范例删除容器 清理脚本删除所有容器：</p>
+<p>6.1 删除所有本地容器脚本:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">stop_contain</span></span>() &#123;</span><br><span class="line"><span class="keyword">for</span> id <span class="keyword">in</span> `docker ps -a |awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$id</span></span><br><span class="line">   docker stop <span class="variable">$id</span></span><br><span class="line">   docker rm <span class="variable">$id</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> id <span class="keyword">in</span> `docker images  |awk <span class="string">&#x27;&#123;print $3&#125;&#x27;</span>`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$id</span></span><br><span class="line">   docker rmi <span class="variable">$id</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>6.2  docker-compose的使用<br>docker-compose 命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>docker-compose down</td>
+<td>会停止管理内的所有容器，并删掉容器</td>
+</tr>
+<tr>
+<td>docker-compose pull （可指定镜像名）</td>
+<td>更新镜像到最新的</td>
+</tr>
+<tr>
+<td>docker-compose up -d</td>
+<td>启动项目内服务</td>
+</tr>
+</tbody></table>
+<p>管理一个项目参考范例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">&quot;3&quot;</span></span><br><span class="line">services:</span><br><span class="line">  demo:</span><br><span class="line">    build: .</span><br><span class="line">    image: 172.16.13.157:5000/demo/demo:latest</span><br><span class="line">    container_name: demo-web</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">&quot;9301:9301&quot;</span></span><br><span class="line">    volumes:</span><br><span class="line">      - uploads:/var/www/html/web/uploads</span><br><span class="line">    networks:</span><br><span class="line">      - demoweb</span><br><span class="line">    depends_on:</span><br><span class="line">      - mysql</span><br><span class="line">    links:</span><br><span class="line">      - mysql:mysql</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">    restart: always</span><br><span class="line">    privileged: <span class="literal">true</span></span><br><span class="line">  mysql:</span><br><span class="line">    image: 172.16.13.157:5000/demo/mysql:8.0</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">&quot;3407:3407&quot;</span></span><br><span class="line">    container_name: <span class="string">&quot;demo-mysql&quot;</span></span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">      - MYSQL_ROOT_PASSWORD=1234567654321</span><br><span class="line">      - MYSQL_DATABASE=demopro</span><br><span class="line">      - MYSQL_USER=demo</span><br><span class="line">      - MYSQL_PASSWORD=1234567654321</span><br><span class="line">    networks:</span><br><span class="line">      - demoweb</span><br><span class="line">    <span class="built_in">command</span>:</span><br><span class="line">      --default-authentication-plugin=mysql_native_password</span><br><span class="line">      --character-set-server=utf8mb4</span><br><span class="line">      --collation-server=utf8mb4_general_ci</span><br><span class="line">      --explicit_defaults_for_timestamp=<span class="literal">true</span></span><br><span class="line">      --lower_case_table_names=1</span><br><span class="line">    volumes:</span><br><span class="line">      - ./mysql/data:/var/lib/mysql</span><br><span class="line">    restart: always</span><br><span class="line">networks:</span><br><span class="line">  demoweb:</span><br><span class="line">    driver: bridge</span><br><span class="line">volumes:</span><br><span class="line">  uploads:</span><br></pre></td></tr></table></figure>
     </div>
 
     <div class="post-footer">
@@ -248,15 +324,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2021/03/16/pyenv/" class="pre-post btn btn-default" title='PYENV-项目环境管理'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">PYENV-项目环境管理</span>
-        </a>
     
-    
-        <a href="/2021/03/15/readme/" class="next-post btn btn-default" title='自动报表说明'>
+        <a href="/2021/03/17/vim/" class="next-post btn btn-default" title='编辑器vim介绍'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">自动报表说明</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">编辑器vim介绍</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
