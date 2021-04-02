@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>python 对文件操作 | easton stack</title>
+<title>word模板 | easton stack</title>
 
 
     <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
@@ -148,9 +148,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="python 对文件操作">
+        <h1 id="word模板">
             
-	            python 对文件操作
+	            word模板
             
         </h1>
         <div class="post-meta">
@@ -169,12 +169,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/python" title='python'>
-                        python
-                    </a>
-                
-                    <a href="/tags/文件操作" title='文件操作'>
-                        文件操作
+                    <a href="/tags/docxtpl" title='docxtpl'>
+                        docxtpl
                     </a>
                 
             
@@ -186,7 +182,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2021/03/12</span>
+            <span class="date-meta">2021/04/02</span>
         </span>
     
 </div>
@@ -196,56 +192,22 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p> 文件操作是任何语言，都会遇到问题。</p>
-<p>1  读文件<br>2  写文件：<br>3  创建目录<br>4  查找文件<br>5  读写json文件</p>
-<h3 id="1-读文件："><a href="#1-读文件：" class="headerlink" title="1 读文件："></a>1 读文件：</h3><pre><code>open(&#39;file&#39;,&#39;mode&#39;)
+        <h3 id="模板操作-docxtpl"><a href="#模板操作-docxtpl" class="headerlink" title="模板操作(docxtpl )"></a>模板操作(docxtpl )</h3><p>1 文本插入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###</span></span><br><span class="line">from docxtpl import DocxTemplate</span><br><span class="line">doc = DocxTemplate(<span class="string">&quot;demo_template.docx&quot;</span>)</span><br><span class="line">context = &#123; <span class="string">&#x27;company_name&#x27;</span> : <span class="string">&quot;World company&quot;</span> &#125;</span><br><span class="line">doc.render(context)</span><br><span class="line">doc.save(<span class="string">&quot;demo.docx&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; company_name &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2 图片插入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tpl = DocxTemplate(<span class="string">&quot;demo_template.docx&quot;</span>)</span><br><span class="line">context = context</span><br><span class="line">context[<span class="string">&quot;images&quot;</span>] = [</span><br><span class="line">  InlineImage(tpl,<span class="string">&#x27;image1.png&#x27;</span>,width=Mm(146.5), height=Mm(49.7)),</span><br><span class="line">  InlineImage(tpl,<span class="string">&#x27;image2.png&#x27;</span>,width=Mm(146.5), height=Mm(52.2))</span><br><span class="line">]</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line">tpl.render(context)</span><br><span class="line">tpl.save(<span class="string">&quot;demo.docx&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;%p for img in images %&#125;</span><br><span class="line">&#123;&#123; img &#125;&#125;</span><br><span class="line">&#123;%p endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<pre><code>  官方地址:https://docxtpl.readthedocs.io/en/latest/
+  pip install docxtpl
 </code></pre>
-<table>
-<thead>
-<tr>
-<th>mode常用的模式</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>r</td>
-<td>表示文件只能读取</td>
-</tr>
-<tr>
-<td>w</td>
-<td>表示文件只能写入</td>
-</tr>
-<tr>
-<td>a</td>
-<td>表示打开文件，在原有内容的基础上追加内容，在末尾写入</td>
-</tr>
-<tr>
-<td>w+</td>
-<td>表示可以对文件进行读写双重操作</td>
-</tr>
-</tbody></table>
-<p>文件中的换行符会转换为’\n’形式。<br>相反，在默认模式下写入文件时，文本中的’\n’会转换为换行符。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">with  open(<span class="string">&#x27;require.txt&#x27;</span>) as f:</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">    f.close()</span><br><span class="line">输出结果：</span><br><span class="line">docxtpl ==0.11.3</span><br><span class="line">Jinja2  ==2.11.3</span><br><span class="line">Pillow==8.1.2</span><br><span class="line">python-docx==0.8.10</span><br><span class="line">selenium==3.141.0</span><br><span class="line">six==1.15.0</span><br><span class="line">Tcl==0.2</span><br><span class="line">tk==0.1.0</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">with  open(<span class="string">&#x27;require.txt&#x27;</span>) as f:</span><br><span class="line">    <span class="built_in">print</span>(f.readlines())</span><br><span class="line">    f.close()</span><br><span class="line">输出结果：  </span><br><span class="line">[<span class="string">&#x27;docxtpl ==0.11.3\n&#x27;</span>, <span class="string">&#x27;Jinja2  ==2.11.3\n&#x27;</span>, <span class="string">&#x27;Pillow==8.1.2\n&#x27;</span>, <span class="string">&#x27;python-docx==0.8.10\n&#x27;</span>, <span class="string">&#x27;selenium==3.141.0\n&#x27;</span>, <span class="string">&#x27;six==1.15.0\n&#x27;</span>, <span class="string">&#x27;Tcl==0.2\n&#x27;</span>, <span class="string">&#x27;tk==0.1.0&#x27;</span>]    </span><br></pre></td></tr></table></figure>
-<p>read()       有个参数size 默认全部读出。<br>readlines()  逐行读取，适合更多场景。</p>
-<p>2、 写文件：<br>    write方法</p>
-<p>以下是个追加写入 mod使用了 “a”</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">with  open(<span class="string">&#x27;require.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) as f:</span><br><span class="line">    f.write(<span class="string">&#x27;hello,this is python require files&#x27;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">文件内容变成:</span><br><span class="line">docxtpl ==0.11.3</span><br><span class="line">Jinja2  ==2.11.3</span><br><span class="line">Pillow==8.1.2</span><br><span class="line">python-docx==0.8.10</span><br><span class="line">selenium==3.141.0</span><br><span class="line">six==1.15.0</span><br><span class="line">Tcl==0.2</span><br><span class="line">tk==0.1.0</span><br><span class="line">hello,this is python require files</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3、创建目录"><a href="#3、创建目录" class="headerlink" title="3、创建目录"></a>3、创建目录</h3><p>为自己的文件创建路径：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def mkdir(path):</span><br><span class="line">    import os</span><br><span class="line">    folder = os.path.exists(path)</span><br><span class="line">    <span class="keyword">if</span> not folder:                   <span class="comment">#判断是否存在文件夹如果不存在则创建为文件夹</span></span><br><span class="line">        os.makedirs(path)            <span class="comment">#makedirs 创建文件时如果路径不存在会创建这个路径</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;--- mk new folder...  ---&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---  OK  ---&quot;</span>)</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---  There is this folder!  ---&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="4、-查找文件"><a href="#4、-查找文件" class="headerlink" title="4、 查找文件"></a>4、 查找文件</h3><p>可以考虑使用python写一个查找文件的方法<br>下面是个查找路径下所有文件方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import os, re</span><br><span class="line"></span><br><span class="line">def findAllFile(dir):</span><br><span class="line">    <span class="keyword">for</span> root, ds, fs <span class="keyword">in</span> os.walk(dir):</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> fs:</span><br><span class="line">            <span class="keyword">if</span> re.match(r<span class="string">&#x27;.*\d.*&#x27;</span>, f):</span><br><span class="line">                fullname = os.path.join(root, f)</span><br><span class="line">                yield fullname</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    dir = <span class="string">&#x27;log&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> findAllFile(dir):</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()            </span><br><span class="line">这个结果查找出所有 <span class="built_in">log</span>下文件</span><br><span class="line">有兴趣可以该陈一个类 实现 找到需要类型工具</span><br></pre></td></tr></table></figure>
-
-<h3 id="5、-读写json文件："><a href="#5、-读写json文件：" class="headerlink" title="5、 读写json文件："></a>5、 读写json文件：</h3><p>越来越多的项目会以接口方式，而json是接口常用的数据格式。<br>requests 是python使用最频繁的库。<br>json 也是我们必须掌握的数据类型。</p>
-<p>下面使用了requests 去访问个</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.get(<span class="string">&#x27;http://ip/abc.json&#x27;</span>%,headers=&#123;<span class="string">&#x27;Host&#x27;</span>:<span class="string">&#x27;domain&#x27;</span>&#125;,verify=False)</span><br></pre></td></tr></table></figure>
-
-<p>下面上一段代码，可以作为参考，涉及到了 文件下载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line">import requests</span><br><span class="line">import time</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">today&#x3D;time.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">filename&#x3D;&quot;%s.json&quot;% today</span><br><span class="line">r&#x3D;requests.get(&#39;http:&#x2F;&#x2F;10.10.10.10&#x2F;rp&#x2F;%s.json&#39;% today,headers&#x3D;&#123;&#39;Host&#39;:&#39;***.abc.com&#39;&#125;,verify&#x3D;False)</span><br><span class="line"></span><br><span class="line">def store(file):</span><br><span class="line">    with open(file, &#39;wb&#39;) as fd:</span><br><span class="line">        for chunk in r.iter_content(chunk_size&#x3D;128):</span><br><span class="line">            fd.write(chunk) </span><br><span class="line">def load(file):</span><br><span class="line">     with open(file,&#39;r&#39;) as f:</span><br><span class="line">        data &#x3D; json.load(f)</span><br><span class="line">        data &#x3D; json.loads(data)</span><br><span class="line">        print(type(data))</span><br><span class="line">        for k in data:</span><br><span class="line">            print(k)</span><br><span class="line">        # print(data[&#39;gp_log&#39;])</span><br><span class="line">        # print(data[&#39;datax_log&#39;])</span><br><span class="line">        # print(data[&#39;datax_detail&#39;])</span><br><span class="line">        return data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    load(filename)</span><br></pre></td></tr></table></figure>
-<h6 id="note-其实我们访问一个站点最终是IP-domain并非比选项-现实我们反而只关心domain-、作为运维其实要知道的。"><a href="#note-其实我们访问一个站点最终是IP-domain并非比选项-现实我们反而只关心domain-、作为运维其实要知道的。" class="headerlink" title="note:其实我们访问一个站点最终是IP,domain并非比选项(现实我们反而只关心domain)、作为运维其实要知道的。"></a>note:其实我们访问一个站点最终是IP,domain并非比选项(现实我们反而只关心domain)、作为运维其实要知道的。</h6><p>所以写代码，如果明确IP和domain并不需要配置hosts什么的，只要告知标ip服务器domain即可(cmdb完善的系统完全可规避这问题)。</p>
 
     </div>
 
@@ -263,15 +225,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2021/03/12/linux/" class="pre-post btn btn-default" title='linux关于运维族系介绍'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">linux关于运维族系介绍</span>
-        </a>
     
-    
-        <a href="/2021/03/09/use-git/" class="next-post btn btn-default" title='use git'>
+        <a href="/2021/03/19/docker/" class="next-post btn btn-default" title='容器镜像的导出导入'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">use git</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">容器镜像的导出导入</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
