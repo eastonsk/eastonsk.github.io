@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>use git | easton stack</title>
+<title>Tag: examination | easton stack</title>
 
 
     <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
@@ -148,174 +148,37 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="use git">
-            
-	            use git
-            
-        </h1>
-        <div class="post-meta">
+                <main class="col-md-8 main-content ">
+                    <h3> 
+    
+        examination 
     
     
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/ ">
-             
-        </a>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-                
-                    <a href="/tags/git" title='git'>
-                        git
-                    </a>
-                
-            
-        </span>
-    </span>
-    
+</h3>
 
-    
+    <article class="post">
         
-        <span class="fa-wrap">
-            <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2021/03/09</span>
-        </span>
-    
-</div>
-
-            
-            
-    </div>
-    
-    <div class="post-body post-content">
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1 Git 基本介绍<br>2 GIt 命令介绍<br>3 Git 使用范例</p>
-<h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><p>1、git特点:<br>  分布式代码管理<br>2、本次git培训规范:<br>最大收获是这个了大家知晓下：<br>开发环境分支: dev<br>测试环境分支: master<br>生产发布分支: release<br>代码修复分支: hotfix</p>
-<h2 id="二、git命令介绍："><a href="#二、git命令介绍：" class="headerlink" title="二、git命令介绍："></a>二、git命令介绍：</h2><p>我自己写了点git使用命令，基本满足运维需求。<br>之所以选择命令操作，因为工具各异，不好统一。<br>1 命令是运维基本需要的，运维大多在服务器上调试，基本上没什么界面。<br>2 工具各异本质都是命令，修复问题，命令也是最后的大招了。</p>
-<table>
-<thead>
-<tr>
-<th align="center">操作命令</th>
-<th align="left">说明备注</th>
-<th align="right">范例</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">git  checkout -b name</td>
-<td align="left">name 创建的分支名称</td>
-<td align="right">git checkout -b dev</td>
-<td align="center">创建dev分支，并切到新分支 ‘dev’</td>
-</tr>
-<tr>
-<td align="center">git  branch</td>
-<td align="left">查看分支</td>
-<td align="right"></td>
-<td align="center">列出分支清单并且 * 表示当前所在分支</td>
-</tr>
-<tr>
-<td align="center">git add fname</td>
-<td align="left">fname 文件名</td>
-<td align="right">git add readme.txt</td>
-<td align="center">添加readme.txt 到git版本管理里</td>
-</tr>
-<tr>
-<td align="center">git commit</td>
-<td align="left">提交文件</td>
-<td align="right">git commit -m “add readme.txt dev”</td>
-<td align="center">提交文件到仓库</td>
-</tr>
-<tr>
-<td align="center">git checkout  name</td>
-<td align="left">切换到分支name</td>
-<td align="right">git checkout master</td>
-<td align="center">切换到master分支</td>
-</tr>
-<tr>
-<td align="center">git merge name</td>
-<td align="left">合并分支 name</td>
-<td align="right">git merge dev</td>
-<td align="center">把分支dev 合并到当前分支</td>
-</tr>
-<tr>
-<td align="center">git tag …</td>
-<td align="left"></td>
-<td align="right"></td>
-<td align="center">这个一般为了发布版本 包含创建 删除等操作</td>
-</tr>
-</tbody></table>
-<h2 id="三、git命令使用范例："><a href="#三、git命令使用范例：" class="headerlink" title="三、git命令使用范例："></a>三、git命令使用范例：</h2><p>  基本包含以下操作：创建分支、切换分支、添加文件、合并代码、删除分支</p>
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> git checkout -b dev</span><br><span class="line">切换到一个新分支 <span class="string">&#x27;dev&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="命令查看当前分支"><a href="#命令查看当前分支" class="headerlink" title="命令查看当前分支"></a>命令查看当前分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git branch</span><br><span class="line">* dev</span><br><span class="line">  main</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
-<p>git branch命令会列出所有分支，当前分支前面会标一个*号。</p>
-<h3 id="创建文件-提交过程。"><a href="#创建文件-提交过程。" class="headerlink" title="创建文件 提交过程。"></a>创建文件 提交过程。</h3><p> 创建文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">touch readme.txt</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ git status</span><br><span class="line">位于分支 dev</span><br><span class="line">未跟踪的文件:</span><br><span class="line">  （使用 <span class="string">&quot;git add &lt;文件&gt;...&quot;</span> 以包含要提交的内容）</span><br><span class="line">	readme.txt</span><br></pre></td></tr></table></figure>
-<p>添加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> git status</span><br><span class="line">位于分支 dev</span><br><span class="line">要提交的变更：</span><br><span class="line">  （使用 <span class="string">&quot;git restore --staged &lt;文件&gt;...&quot;</span> 以取消暂存）</span><br><span class="line">	新文件：   readme.txt</span><br></pre></td></tr></table></figure>
-<p>提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git commit -m <span class="string">&quot;add readme.txt dev&quot;</span></span><br><span class="line">[dev 18f7897] add readme.txt dev</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
-<h6 id="note-git-commit-是到-本地代码库-分布式代码管理特点-，git-push-才是推到公共某个分支。"><a href="#note-git-commit-是到-本地代码库-分布式代码管理特点-，git-push-才是推到公共某个分支。" class="headerlink" title="note: git commit 是到 本地代码库(分布式代码管理特点)，git push 才是推到公共某个分支。"></a>note: git commit 是到 <font color="orange">本地</font>代码库(分布式代码管理特点)，git push 才是推到公共某个分支。</h6><h3 id="merge-示例："><a href="#merge-示例：" class="headerlink" title="merge 示例："></a>merge 示例：</h3><p>切换到master分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">切换到分支 <span class="string">&#x27;master&#x27;</span></span><br><span class="line">您的分支与上游分支 <span class="string">&#x27;origin/master&#x27;</span> 一致。</span><br><span class="line">ls</span><br><span class="line">2021		archives	css		fancybox	index.html	js</span><br></pre></td></tr></table></figure>
-<h6 id="note-我们可以看到-readme-txt-不见了，对的，因为这个文件在dev分支上创建的。"><a href="#note-我们可以看到-readme-txt-不见了，对的，因为这个文件在dev分支上创建的。" class="headerlink" title="note: 我们可以看到 readme.txt 不见了，对的，因为这个文件在dev分支上创建的。"></a>note: 我们可以看到 readme.txt 不见了，对的，因为这个文件在dev分支上创建的。</h6><p>把dev分支的 到master分支上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br><span class="line">更新 ef4b081..18f7897</span><br><span class="line">Fast-forward</span><br><span class="line"> readme.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 readme.txt</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ ls</span><br><span class="line">2021		archives	css		fancybox	index.html	js		readme.txt</span><br></pre></td></tr></table></figure>
-<h6 id="可以看到-readme-txt-merge过来了。"><a href="#可以看到-readme-txt-merge过来了。" class="headerlink" title="可以看到 readme.txt merge过来了。"></a>可以看到 readme.txt merge过来了。</h6><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支:"></a>删除分支:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> git branch -d dev</span><br><span class="line">已删除分支 dev（曾为 18f7897）。</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ git branch</span><br><span class="line">  main</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
-<p>可以看到dev 分支删除了， 只剩下master和main 分支。</p>
-
-    </div>
-
-    <div class="post-footer">
-        <div>
-            
-                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">easton stack</a>
-            
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2021/04/07/network/">网络工程师考试大纲</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2021年04月07日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    网络工程师职称考试学习考试大纲1.考试目标通过本考试的合格人员能根据应用部门的要求进行网 络系统的规划、设计和网络设备的软硬件安装调试工作，能 进行网络系统的运行、维护和管理，能高效、可靠、安全地 管理网络资源，作为网络专业人员对系统...
+                
+            </p> 
         </div>
-        <div>
-            
-        </div>
-    </div>
-</article>
-
-<div class="article-nav prev-next-wrap clearfix">
-    
-        <a href="/2021/03/12/file/" class="pre-post btn btn-default" title='python 对文件操作'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">python 对文件操作</span>
-        </a>
-    
-    
-        <a href="/2021/03/09/hello-world/" class="next-post btn btn-default" title='Hello World'>
-            <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
-        </a>
-    
-</div>
+    </article>
+ 
 
 
-    <div id="comments">
-        
-	
-<div id="lv-container" data-id="city" data-uid="MTAyMC81MjkyNi8yOTQwMw==">
-  <script type="text/javascript">
-     (function(d, s) {
-         var j, e = d.getElementsByTagName(s)[0];
-         if (typeof LivereTower === 'function') { return; }
-         j = d.createElement(s);
-         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-         j.async = true;
-         e.parentNode.insertBefore(j, e);
-     })(document, 'script');
-  </script>
-</div>
-
-
-    </div>
 
 
 

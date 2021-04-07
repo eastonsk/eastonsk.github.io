@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>use git | easton stack</title>
+<title>网络工程师考试大纲 | easton stack</title>
 
 
     <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
@@ -152,9 +152,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="use git">
+        <h1 id="网络工程师考试大纲">
             
-	            use git
+	            网络工程师考试大纲
             
         </h1>
         <div class="post-meta">
@@ -162,8 +162,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/ ">
-             
+        <a href="/categories/network">
+            network
         </a>
     </span>
     
@@ -173,8 +173,16 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/git" title='git'>
-                        git
+                    <a href="/tags/examination" title='examination'>
+                        examination
+                    </a>
+                
+                    <a href="/tags/网络工程师" title='网络工程师'>
+                        网络工程师
+                    </a>
+                
+                    <a href="/tags/考试大纲" title='考试大纲'>
+                        考试大纲
                     </a>
                 
             
@@ -186,7 +194,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2021/03/09</span>
+            <span class="date-meta">2021/04/07</span>
         </span>
     
 </div>
@@ -196,77 +204,8 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1 Git 基本介绍<br>2 GIt 命令介绍<br>3 Git 使用范例</p>
-<h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><p>1、git特点:<br>  分布式代码管理<br>2、本次git培训规范:<br>最大收获是这个了大家知晓下：<br>开发环境分支: dev<br>测试环境分支: master<br>生产发布分支: release<br>代码修复分支: hotfix</p>
-<h2 id="二、git命令介绍："><a href="#二、git命令介绍：" class="headerlink" title="二、git命令介绍："></a>二、git命令介绍：</h2><p>我自己写了点git使用命令，基本满足运维需求。<br>之所以选择命令操作，因为工具各异，不好统一。<br>1 命令是运维基本需要的，运维大多在服务器上调试，基本上没什么界面。<br>2 工具各异本质都是命令，修复问题，命令也是最后的大招了。</p>
-<table>
-<thead>
-<tr>
-<th align="center">操作命令</th>
-<th align="left">说明备注</th>
-<th align="right">范例</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">git  checkout -b name</td>
-<td align="left">name 创建的分支名称</td>
-<td align="right">git checkout -b dev</td>
-<td align="center">创建dev分支，并切到新分支 ‘dev’</td>
-</tr>
-<tr>
-<td align="center">git  branch</td>
-<td align="left">查看分支</td>
-<td align="right"></td>
-<td align="center">列出分支清单并且 * 表示当前所在分支</td>
-</tr>
-<tr>
-<td align="center">git add fname</td>
-<td align="left">fname 文件名</td>
-<td align="right">git add readme.txt</td>
-<td align="center">添加readme.txt 到git版本管理里</td>
-</tr>
-<tr>
-<td align="center">git commit</td>
-<td align="left">提交文件</td>
-<td align="right">git commit -m “add readme.txt dev”</td>
-<td align="center">提交文件到仓库</td>
-</tr>
-<tr>
-<td align="center">git checkout  name</td>
-<td align="left">切换到分支name</td>
-<td align="right">git checkout master</td>
-<td align="center">切换到master分支</td>
-</tr>
-<tr>
-<td align="center">git merge name</td>
-<td align="left">合并分支 name</td>
-<td align="right">git merge dev</td>
-<td align="center">把分支dev 合并到当前分支</td>
-</tr>
-<tr>
-<td align="center">git tag …</td>
-<td align="left"></td>
-<td align="right"></td>
-<td align="center">这个一般为了发布版本 包含创建 删除等操作</td>
-</tr>
-</tbody></table>
-<h2 id="三、git命令使用范例："><a href="#三、git命令使用范例：" class="headerlink" title="三、git命令使用范例："></a>三、git命令使用范例：</h2><p>  基本包含以下操作：创建分支、切换分支、添加文件、合并代码、删除分支</p>
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> git checkout -b dev</span><br><span class="line">切换到一个新分支 <span class="string">&#x27;dev&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="命令查看当前分支"><a href="#命令查看当前分支" class="headerlink" title="命令查看当前分支"></a>命令查看当前分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git branch</span><br><span class="line">* dev</span><br><span class="line">  main</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
-<p>git branch命令会列出所有分支，当前分支前面会标一个*号。</p>
-<h3 id="创建文件-提交过程。"><a href="#创建文件-提交过程。" class="headerlink" title="创建文件 提交过程。"></a>创建文件 提交过程。</h3><p> 创建文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">touch readme.txt</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ git status</span><br><span class="line">位于分支 dev</span><br><span class="line">未跟踪的文件:</span><br><span class="line">  （使用 <span class="string">&quot;git add &lt;文件&gt;...&quot;</span> 以包含要提交的内容）</span><br><span class="line">	readme.txt</span><br></pre></td></tr></table></figure>
-<p>添加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> git status</span><br><span class="line">位于分支 dev</span><br><span class="line">要提交的变更：</span><br><span class="line">  （使用 <span class="string">&quot;git restore --staged &lt;文件&gt;...&quot;</span> 以取消暂存）</span><br><span class="line">	新文件：   readme.txt</span><br></pre></td></tr></table></figure>
-<p>提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git commit -m <span class="string">&quot;add readme.txt dev&quot;</span></span><br><span class="line">[dev 18f7897] add readme.txt dev</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
-<h6 id="note-git-commit-是到-本地代码库-分布式代码管理特点-，git-push-才是推到公共某个分支。"><a href="#note-git-commit-是到-本地代码库-分布式代码管理特点-，git-push-才是推到公共某个分支。" class="headerlink" title="note: git commit 是到 本地代码库(分布式代码管理特点)，git push 才是推到公共某个分支。"></a>note: git commit 是到 <font color="orange">本地</font>代码库(分布式代码管理特点)，git push 才是推到公共某个分支。</h6><h3 id="merge-示例："><a href="#merge-示例：" class="headerlink" title="merge 示例："></a>merge 示例：</h3><p>切换到master分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">切换到分支 <span class="string">&#x27;master&#x27;</span></span><br><span class="line">您的分支与上游分支 <span class="string">&#x27;origin/master&#x27;</span> 一致。</span><br><span class="line">ls</span><br><span class="line">2021		archives	css		fancybox	index.html	js</span><br></pre></td></tr></table></figure>
-<h6 id="note-我们可以看到-readme-txt-不见了，对的，因为这个文件在dev分支上创建的。"><a href="#note-我们可以看到-readme-txt-不见了，对的，因为这个文件在dev分支上创建的。" class="headerlink" title="note: 我们可以看到 readme.txt 不见了，对的，因为这个文件在dev分支上创建的。"></a>note: 我们可以看到 readme.txt 不见了，对的，因为这个文件在dev分支上创建的。</h6><p>把dev分支的 到master分支上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br><span class="line">更新 ef4b081..18f7897</span><br><span class="line">Fast-forward</span><br><span class="line"> readme.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 readme.txt</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ ls</span><br><span class="line">2021		archives	css		fancybox	index.html	js		readme.txt</span><br></pre></td></tr></table></figure>
-<h6 id="可以看到-readme-txt-merge过来了。"><a href="#可以看到-readme-txt-merge过来了。" class="headerlink" title="可以看到 readme.txt merge过来了。"></a>可以看到 readme.txt merge过来了。</h6><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支:"></a>删除分支:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> git branch -d dev</span><br><span class="line">已删除分支 dev（曾为 18f7897）。</span><br><span class="line">***MacBook-Pro:eastonstack yanshenji$ git branch</span><br><span class="line">  main</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
-<p>可以看到dev 分支删除了， 只剩下master和main 分支。</p>
+        <h3 id="网络工程师职称考试学习考试大纲"><a href="#网络工程师职称考试学习考试大纲" class="headerlink" title="网络工程师职称考试学习考试大纲"></a>网络工程师职称考试学习考试大纲</h3><p>1.考试目标<br>通过本考试的合格人员能根据应用部门的要求进行网 络系统的规划、设计和网络设备的软硬件安装调试工作，能 进行网络系统的运行、维护和管理，能高效、可靠、安全地 管理网络资源，作为网络专业人员对系统开发进行技术支持 和指导，具有工程师的实际工作能力和业务水平，能指导网 络管理员从事网络系统的构建和管理工作。<br>2.考试要求<br>(1)熟悉计算机系统的基础知识；<br>(2)熟悉网络操作系统的基础知识；<br>(3)理解计算机应用系统的设计和开发方法；<br>(4)熟悉数据通信的基础知识；<br>(5)熟悉系统安全和数据安全的基础知识；<br>(6)掌握网络安全的基本概念和主要的安全机制和安全 协议；<br>(7)掌握计算机网络体系结构和网络协议的基本原理；<br>(8)掌握计算机网络有关的标准化知识；<br>(9)掌握局域网组网技术，理解城域网和广域网基本 技术；<br>(10)掌握计算机网络互联技术；<br>(11)掌握TCP/IP协议网络的联网方法和网络应用技术;<br>(12)理解接入网与接入技术；<br>(13)掌握网络管理的基本原理和操作方法；<br>(14)熟悉网络系统的性能测试和优化技术，以及可靠 性设计技术；<br>(15)理解网络应用的基本原理和技术；<br>(16)理解网络新技术及其发展趋势；<br>(17)了解有关知识产权和互联网的法律法规；<br>(18)正确阅读和理解计算机领域的英文资料。<br>3.考试科目设置<br>(1)计算机与网络知识，考试时间为150分钟；<br>(2)网络系统设计与管理，考试时间为150分钟。<br>二、考试范围<br>考试科目1:计算机与网络知识<br>1°计算机系统知识<br>L1计算机硬件知识<br>1.1.1计算机组成<br>®计算机部件<br>騒指令系统<br>®处理器的性能<br>1丄2存储器<br>®存储介质<br>®主存(类型、容量和性能)<br>鬱主存配置(交叉存取、多级主存)<br>•辅存（容量、性能）<br>®存储系统（虚拟存储器、高速缓存）<br>L13输入输出结构和设备<br>® 中断、DMA、通道、SCSI<br>® I/O 接口<br>®输入输出设备类型和特征<br>L2操作系统知识<br>L2.1基本概念<br>«操作系统的功能及分类<br>®多道程序<br>、®内核和中断控制<br>®进程和线程<br>122处理机管理、存储管理、设备管理、文 件管理<br>®进程的状态及转换<br>®进程调度算法<br>®死锁<br>®存储管理方案<br>®文件管理<br>®作业调度算法<br>13系统管理<br>13.1系统配置技术<br>*系统构架模式（2层、3层及多层C/S和B/S 系统）<br>®高可用性系统配置方法<br>® RAID技术<br>1.3.2系统性能<br>®性能设计<br>®性能指标、性能评价<br>133系统可靠性<br>®可靠性度量<br>®可靠性设计<br>®可靠性指标和可靠性评估，RAS<br>2。系统开发和运行基础知识<br>2J系统开发基础知识<br>2丄1需求分析和设计<br>®需求分析和管理<br>鬱结构化分析与设计<br>®面向对象分析与设计<br>®模块设计、I/O设计、人机界面设计<br>2丄2测试评审方法<br>®测试方法<br>•评审方法<br>®测试设计和管理方法（注入故障、系统测 试）<br>2丄3项目管理基础知识<br>®制订项目计划<br>®质量控制计划、管理和评估<br>®过程管理（PERT图、甘特图、工作分解结 构、进度控制、关键路径）<br>®配置管理<br>滲人员计划和管理<br>•文档管理（文档规范、变更管理）<br>®成本管理和风险管理<br>22系统维护<br>缪维护的类型<br>®维护过程管理<br>®硬件维护、软件维护<br>3.网络技术<br>3.1网络体系结构<br>3.L1网络拓扑结构<br>3.1.2网络分类<br>® LAN、MAN、WAN<br>®接入网、主干网<br>3 丄3 ISO OSI/RM<br>3.1.4 TCP/IP参考模型<br>3.2 TCP/IP 协议<br>®应用层协议<br>霸传输层协议（TCP、UDP）<br>® 网络层协议（IP、ICMP、ARP）<br>«数据链路层协议<br>3.3数据通信基础<br>3.3.1信道特性<br>332调制和编码<br>® ‘ ASK、FSK、PSK、QPSK<br>®寸由样定理、PCM<br>®编码<br>333传输技术<br>®通信方式（单工/半双工/全双工、串行/并行）<br>®差错控制<br>®同步控制<br>®多路复用<br>334传输介质<br>®有线介质<br>鬱无线介质<br>3.3.5光纤交换网络(EPON、GPON)<br>336物理层<br>34局域网<br>© IEEE 802体系结构<br>©以太网<br>饗网络连接设备<br>®高速LAN技术<br>® VLAN<br>« 无线 LAN、CSMA/‘CA<br>3。5网络互联<br>®网络互联设备<br>•交换设备与技术<br>®接入设备与技术<br>3.6因特网与物联网<br>®因特网概念<br>® Internet 服务<br>®移动支付<br>®物联网技术<br>35网络操作系统<br>爨网络操作系统的功能、分类和特点<br>® Windows 2008 R2<br>• RedHat Linux 7<br>3.8网络管理<br>鬱网络管理的功能域<br>®网络管理协议<br>骚网络管理命令<br>®网络管理工具<br>3.9存储域网络<br>® FC-SAN, IP-SAN<br>4.网络安全<br>4.1安全技术与协议<br>4.1.1保密<br>®私钥加密体制<br>麝公钥加密体制<br>4.1.2安全机制<br>®认证<br>®数字签名<br>®完整性<br>®访问控制<br>4.1.3安全协议<br>4丄4病毒防范与入侵检测<br>4.2访问控制技术<br>4.3UTM安全网关<br>4.4IDS、IPS<br>5.网络新技术<br>5.1云存储<br>52物联网<br>53网络管理虚拟化<br>5.4软件定义网络等<br>6.标准化知识<br>6J信息系统基础设施标准化<br>6.1.1 标准<br>®国际标准(ISO. IEC)与美国国家标准<br>(ANSI)<br>囈中国国家标准(GB)<br>®行业标准与企业标准<br>6丄2安全性标准<br>«信息系统安全措施<br>® CC标准<br>® BS7799 标准<br>6.2标准化组织<br>®国际标准化组织<br>•美国标准化组织<br>®欧洲标准化组织<br>®中国国家标准化委员会<br>7•信息化基础知识<br>®全球信息化趋势、国家信息化战略、企业信 息化战略和策略<br>®互联网相关的法律、法规知识<br>滲个人信息保护规则<br>爨远程教育、电子商务、电子政务等基础知识<br>®企业信息资源管理基础知识<br>8.计算机专业英语<br>®具有工程师所要求的英语阅读水平<br>®理解本领域的英语术语<br>考试科目2：网络系统设计与管理<br>1.网络系统分析与设计<br>L1网络系统的需求分析<br>LL1应用需求分析<br>寧应用需求的调研 鬱网络应用的分析<br>1.1.2现有网络系统分析 ＞现有网络系统结构调研 麝现有网络体系结构分析<br>• LL3需求分析<br>®功能需求<br>®通信需求<br>簿性能需求<br>®可靠性需求<br>®安全需求<br>®维护和运行需求<br>®管理需求（管理策略）<br>12网络系统的设计<br>121技术和产品的调研和评估 察收集信息<br>®采用的技术和产品的比较研究 缪采用的技术和设备的比较要点 L2.2网络系统的设计<br>®确定协议<br>滲确定拓扑结构<br>徽确定连接（链路的通信性能）<br>e确定节点（节点的处理能力）<br>®确定网络的性能    .<br>®确定可靠性措施<br>鬱确定安全性措施<br>®结构化布线系统<br>®网络设备的选择，制定选择标准<br>缪通信子网的设计<br>e资源子网的设计<br>L2.3新网络业务运营计划<br>124设计评审<br>1.3网络系统的构建和测试<br>1.3.1 安装工作<br>132测试和评估<br>133转换到新网络的工作计划<br>2.网络系统的运行、维护管理、评价<br>2.1网络系统的运行和维护<br>2.1.1用户措施<br>®用户管理、用户培训、用户协商<br>2丄2制定维护和升级的策略和计划<br>®确定策略<br>®设备的编制<br>®审查的时间<br>®升级的时间<br>2丄3维护和升级的实施<br>®外部合同要点<br>®内部执行要点<br>2.1.4备份与数据恢复<br>®数据的存储与处置<br>®备份<br>®数据恢复<br>2.L5网络系统的配置管理<br>髒设备管理<br>®软件管理<br>®网络配置图<br>2.2网络系统的管理<br>221网络系统的监视<br>®网络管理协议（SNMP、MIB-2、RMON）<br>滲利用工具监视网络性能<br>e利用工具监视网络故障<br>®利用工具监视网络安全（入侵检测系统）<br>®性能监视的检查点<br>•安全监视的检查点<br>222故障恢复分析<br>鸞故障分析要点（LAN监控程序）<br>«排除故障要点<br>®故障报告撰写要点<br>223系统性能分析<br>®系统性能要点<br>224防止危害的安全对策<br>＞危害安全情况分析<br>警入侵检测要点<br>®对付计算机病毒的要点<br>23网络系统的评价<br>231系统评价<br>®系统能力的限制<br>®潜在的问题分析<br>®系统评价要点<br>232改进系统的建议    ■<br>滲系统生命周期<br>＞系统经济效益<br>®系统的可扩充性<br>3。网络系统实现技术<br>3」网络协议<br>32可靠性设计<br>®硬件高可靠性技术<br>籲软件高可靠性技术<br>鬱系统维护高可靠性技术<br>®容错技术、RAID<br>.    ®通信质量QoS<br>33网络设施<br>331xDSL调制解调器<br>332FRAD （帧装配/拆除）、CLAD （信元装 配/拆装）<br>333交换机和路由器的配置<br>滲访问交换机和路由器<br>® VLAN配置<br>滲路由协议配置<br>®广域联网<br>® DTP、STP、RSTP<br>334远程访问服务器<br>335多层交换机功能和机制<br>336 IP路由器功能和控制<br>3.4网络应用与服务<br>3.4.1 IP 地址<br>® IPv4、 IPv6<br>®动态分配和静态分配</p>
+<p> DHCP服务器的原理及配置（Windows.<br>Linux）<br>342网络系统管理<br>®网络管理命令<br>© Linux系统<br>® Windows 系统<br>® Windows活动目录和域管理<br>® Windows终端服务与远程管理<br>3.4.3 DNS<br>•URL<br>®域名解析<br>® DNS 服务器的配置（Windows、Linux）<br>344 电子邮件服务器配置（Windows、Linux）<br>3.4.5 WWW<br>®虚拟主机<br>® WWW 服务器配置（Windows&gt; Linux）<br>® WWW服务器的安全配置<br>3A6 FTP服务器<br>•FTP服务器的访问<br>® FTP 服务器的配置（Windows、Linux）<br>347网络接入与服务<br>® HFC、ADSL、FTTx+LAN、WLAN、移动 通信<br>® ISP、IDC<br>3.5网络安全<br>351访问控制与防火墙<br>骚ACL命令<br>®过滤规则<br>®防火墙配置<br>3.5.2数字证书 353 VPN配置<br>3.5.4 PGP<br>355病毒防护<br>356 IDS、IPS、UTM</p>
 
     </div>
 
@@ -284,15 +223,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2021/03/12/file/" class="pre-post btn btn-default" title='python 对文件操作'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">python 对文件操作</span>
-        </a>
     
-    
-        <a href="/2021/03/09/hello-world/" class="next-post btn btn-default" title='Hello World'>
+        <a href="/2021/04/02/docxtpl/" class="next-post btn btn-default" title='word模板'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">word模板</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
