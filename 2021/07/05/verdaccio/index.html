@@ -203,7 +203,7 @@
         <p>公司vue项目越来越多，对node项目的支撑，迫切需要npm私服的支持。<br>所以搭建npm私服，行业verdaccio 是最佳选择，所以自己搭建了一个私服。<br>因为是新申请主机，我把从零开始搭建一个私服过程记录下。</p>
 <h3 id="1、-verdaccio-首先需要node私服支持，所以先安装环境。"><a href="#1、-verdaccio-首先需要node私服支持，所以先安装环境。" class="headerlink" title="1、 verdaccio 首先需要node私服支持，所以先安装环境。"></a>1、 verdaccio 首先需要node私服支持，所以先安装环境。</h3><p>npm node环境安装：</p>
 <p>下载安装包：<br><a target="_blank" rel="noopener" href="https://nodejs.org/dist/v14.17.2/node-v14.17.2-linux-x64.tar.xz">https://nodejs.org/dist/v14.17.2/node-v14.17.2-linux-x64.tar.xz</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xz -d /opt/tmp/node-v14.17.2-linux-x64.tar.xz</span><br><span class="line">mkdir /opt/node &amp;&amp; <span class="built_in">cd</span> /opt/node/ &amp;&amp; tar xvf  /opt/tmp/node-v14.17.2-linux-x64.tar</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/tmp/ &amp;&amp; <span class="built_in">cd</span> /opt/tmp</span><br><span class="line">wget https://nodejs.org/dist/v14.17.2/node-v14.17.2-linux-x64.tar.xz</span><br><span class="line">xz -d /opt/tmp/node-v14.17.2-linux-x64.tar.xz</span><br><span class="line">mkdir /opt/node &amp;&amp; <span class="built_in">cd</span> /opt/node/ &amp;&amp; tar xvf  /opt/tmp/node-v14.17.2-linux-x64.tar</span><br></pre></td></tr></table></figure>
 
 
 <p>配置node环境变量:</p>
