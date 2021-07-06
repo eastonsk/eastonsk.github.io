@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="zh_cn">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="easton stack">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://eastonsk.github.io">
+    <!--SEO-->
+
+<meta name="description" content="easton stack"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>go介绍 | easton stack</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_xxxxxxx hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3Dxxxxxxx%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <!--
+<header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Easton yan'>
+            <img src="/img/logo.png" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+-->
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">		
+            <div class="col-sm-12">
+            <div class="main-header-box" >
+        	<a class="header-avatar" href="/" title='Easton yan'>
+            	<img src="/img/logo.png" alt="logo" class="img-responsive" style="float: left; width: 3.5em; height:3.5em;margin-top: 0.6em">
+            	<span style="float: left; line-height: 4em; font-size: 1.2em; margin-left: 0.3em; color:#505050">EASTON STACK</span>
+        	</a>
+				</div>
+               
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+				
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/os/"><i class="fa "></i>系统</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/network/"><i class="fa "></i>网络</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/cluster/"><i class="fa "></i>集群</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/docker/"><i class="fa "></i>容器</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/python/"><i class="fa "></i>语言</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/mt/"><i class="fa "></i>运维工具</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="go介绍">
+            
+	            go介绍
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/python">
+            python
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/go" title='go'>
+                        go
+                    </a>
+                
+                    <a href="/tags/go介绍" title='go介绍'>
+                        go介绍
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2021/05/20</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>##go语言简介</p>
+<p>Go语言专门针对多处理器系统应用程序的编程进行了优化，使用Go编译的程序可以媲美C或C++代码的速度，而且更加安全、支持并行进程。</p>
+<p>##背景介绍</p>
+<p>Go语言是谷歌推出的一种全新的编程语言，可以在不损失应用程序性能的情况下降低代码的复杂性。谷歌首席软件工程师罗布派克(Rob Pike)说：我们之所以开发Go，是因为过去10多年间软件开发的难度令人沮丧。</p>
+<p>为什么提出这个语言：<br>   因为对于运维来说，go语言非常适合运维场景。<br>1 安装无需像其他，语言需要这种或者那种依赖。<br>2 背靠，容器已经很成熟，go语言作为容器 和os之间的中间件。</p>
+<p>1 安装go语言</p>
+<p>（1）brew安装<br>brew install go<br>（2）下载安装包<br><a target="_blank" rel="noopener" href="https://golang.org/dl/">https://golang.org/dl/</a></p>
+<p>2 配置go语言环境变量</p>
+<p>go语言安装好后，默认的安装路径是：/usr/local/go，可以进去看看各种安装文件<br>打开 .bash_profile 文件，在最后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mac </span></span><br><span class="line"><span class="built_in">export</span> GOPATH=/usr/<span class="built_in">local</span>/go</span><br><span class="line"><span class="built_in">export</span> GOBIN=<span class="variable">$GOPATH</span>/bin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOBIN</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># linux</span></span><br><span class="line"><span class="built_in">export</span> GOROOT=/usr/<span class="built_in">local</span>/go</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br></pre></td></tr></table></figure>
+
+<p>GOROOT和GOPATH都是环境变量，其中GOROOT是我们安装go开发包的路径，而从Go 1.8版本开始，Go开发包在安装完成后会为GOPATH设置一个默认目录，并且在Go1.14及之后的版本中启用了Go Module模式之后，不一定非要将代码写到GOPATH目录下，所以也就不需要我们再自己配置GOPATH了，使用默认的即可。</p>
+<p>3 查看go语言是否安装成功<br>查看安装的go版本：go  version</p>
+<p>先创建你的工作空间(Workspaces)，官方建议目录$HOME/go。</p>
+<p>mkdir $HOME/workingspace/go<br>工作空间路径声明到环境变量中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export GOPATH=<span class="variable">$HOME</span>/workingspace/go&quot;</span>  &gt;&gt; ~/.bash_profile</span><br><span class="line">mkdir -p <span class="variable">$GOPATH</span>/src/hello &amp;&amp; <span class="built_in">cd</span> <span class="variable">$GOPATH</span>/src/hello</span><br></pre></td></tr></table></figure>
+<p>创建并进入你的第一个工程目录：</p>
+<p>初步开发，打印出hello world</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package main </span><br><span class="line">import (</span><br><span class="line"><span class="string">&quot;fmt&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">mani</span></span>() &#123;</span><br><span class="line">	fmt.println（<span class="string">&quot;hello wolrd!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（1）直接运行文件：<br>go run hello.go<br>（2）先编译，再运行编译文件<br>go build hello.go</p>
+<p>4 GOPROXY 非常重要<br>Go1.14版本之后，都推荐使用go mod模式来管理依赖环境了，也不再强制我们把代码必须写在GOPATH下面的src目录了，你可以在你电脑的任意位置编写go代码。（网上有些教程适用于1.11版本之前。）</p>
+<p>默认GoPROXY配置是：GOPROXY=<a target="_blank" rel="noopener" href="https://proxy.golang.org,direct,由于国内访问不到https//proxy.golang.org%EF%BC%8C%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%8D%A2%E4%B8%80%E4%B8%AAPROXY%EF%BC%8C%E8%BF%99%E9%87%8C%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8https://goproxy.io%E6%88%96https://goproxy.cn%E3%80%82">https://proxy.golang.org,direct，由于国内访问不到https://proxy.golang.org，所以我们需要换一个PROXY，这里推荐使用https://goproxy.io或https://goproxy.cn。</a></p>
+<p>可以执行下面的命令修改GOPROXY：<br>go env -w GOPROXY=<a target="_blank" rel="noopener" href="https://goproxy.cn,direct/">https://goproxy.cn,direct</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> go get -u github.com/beego/beego/v2</span><br><span class="line"></span><br><span class="line">go get: module github.com/beego/beego/v2: Get <span class="string">&quot;https://proxy.golang.org/github.com/beego/beego/v2/@v/list&quot;</span>: dial tcp 172.217.27.145:443: i/o timeout</span><br><span class="line"><span class="comment">#解决问题</span></span><br><span class="line">go env -w GOPROXY=https://goproxy.cn</span><br><span class="line">go get -u github.com/beego/beego/v2</span><br><span class="line">go get -u github.com/beego/bee/v2</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>5 编辑器：</p>
+<p>参考文档：</p>
+<p><a target="_blank" rel="noopener" href="http://docscn.studygolang.com/doc/install">http://docscn.studygolang.com/doc/install</a> 安装<br><a target="_blank" rel="noopener" href="https://tour.go-zh.org/welcome/1">https://tour.go-zh.org/welcome/1</a> 学习<br><a target="_blank" rel="noopener" href="https://beego.me/quickstart">https://beego.me/quickstart</a>  beeego 框架<br><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/403aa507935b">http://www.jianshu.com/p/403aa507935b</a> 使用Go语言开发Android&amp;IOS应用<br><a target="_blank" rel="noopener" href="http://docscn.studygolang.com/doc/">http://docscn.studygolang.com/doc/</a> go文档<br><a target="_blank" rel="noopener" href="https://github.com/golang/go.git">https://github.com/golang/go.git</a> go源码<br><a target="_blank" rel="noopener" href="http://www.golangtc.com/download/package">http://www.golangtc.com/download/package</a> go get被墙解决办法<br><a target="_blank" rel="noopener" href="http://www.golangtc.com/t/554313af421aa92eb3000019">http://www.golangtc.com/t/554313af421aa92eb3000019</a> $GOPATH not set<br><a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/V36jm27">http://www.tuicool.com/articles/V36jm27</a> Go 语言 Android<br><a target="_blank" rel="noopener" href="http://www.ituring.com.cn/article/215762">http://www.ituring.com.cn/article/215762</a> Go 语言 开发iOS (Swift)<br><a target="_blank" rel="noopener" href="https://go.googlesource.com/mobile/+/master/example/basic/">https://go.googlesource.com/mobile/+/master/example/basic/</a></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">easton stack</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2021/06/15/druid/" class="pre-post btn btn-default" title='druid'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">druid</span>
+        </a>
+    
+    
+        <a href="/2021/04/25/logcut/" class="next-post btn btn-default" title='logrotate'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">logrotate</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC81MjkyNi8yOTQwMw==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>Welcome to easton stack .... <br/>
+
+<hr/>接受赞助服务！如果你觉得本站内容对你有帮助，就赞助下呗(≥◇≤) <br/>赞助地址：<a target="_blank" rel="noopener" href="http://tycn.51rgb.cn/static/img/alipay_donate.png">我要赞助下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:easton88@163.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/cluster/"><i class="fa" aria-hidden="true">cluster</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/"><i class="fa" aria-hidden="true">docker</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/"><i class="fa" aria-hidden="true">linux</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mt/"><i class="fa" aria-hidden="true">mt</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/network/"><i class="fa" aria-hidden="true">network</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/os/"><i class="fa" aria-hidden="true">os</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/"><i class="fa" aria-hidden="true">python</i></a><span class="category-list-count">4</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/"><i class="fa" aria-hidden="true">七月 2021</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/"><i class="fa" aria-hidden="true">六月 2021</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/"><i class="fa" aria-hidden="true">五月 2021</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/"><i class="fa" aria-hidden="true">四月 2021</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/"><i class="fa" aria-hidden="true">三月 2021</i></a><span class="archive-list-count">10</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/Filter%EF%BC%8DChain/" style="font-size: 10px;">Filter－Chain</a> <a href="/tags/SQLParser/" style="font-size: 10px;">SQLParser</a> <a href="/tags/docxtpl/" style="font-size: 10px;">docxtpl</a> <a href="/tags/druid/" style="font-size: 10px;">druid</a> <a href="/tags/examination/" style="font-size: 10px;">examination</a> <a href="/tags/fproxy/" style="font-size: 10px;">fproxy</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/go%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">go介绍</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/key/" style="font-size: 10px;">key</a> <a href="/tags/linux/" style="font-size: 16.67px;">linux</a> <a href="/tags/linux%E6%97%8F%E7%B3%BB/" style="font-size: 10px;">linux族系</a> <a href="/tags/logrotate/" style="font-size: 10px;">logrotate</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/npm%E7%A7%81%E6%9C%8D/" style="font-size: 10px;">npm私服</a> <a href="/tags/os/" style="font-size: 20px;">os</a> <a href="/tags/pyenv/" style="font-size: 10px;">pyenv</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/python%E7%89%88%E6%9C%AC/" style="font-size: 10px;">python版本</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/verdaccio/" style="font-size: 10px;">verdaccio</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" style="font-size: 10px;">免密登录</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E5%AF%86%E9%92%A5/" style="font-size: 10px;">密钥</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 10px;">文件操作</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 10px;">网络工程师</a> <a href="/tags/%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2/" style="font-size: 10px;">考试大纲</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">自动化测试</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8A%A5%E8%A1%A8/" style="font-size: 10px;">自动报表</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">项目环境</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.baidu.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2021
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	
+<script src="/js/search.js?rev=@@hash.js"></script>
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+
+
+</body>
+</html>

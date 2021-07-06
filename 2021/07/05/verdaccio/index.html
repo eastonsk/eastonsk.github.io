@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html lang="zh_cn">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="easton stack">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://eastonsk.github.io">
+    <!--SEO-->
+
+<meta name="description" content="easton stack"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>verdaccio | easton stack</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="easton stack" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_xxxxxxx hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3Dxxxxxxx%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <!--
+<header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Easton yan'>
+            <img src="/img/logo.png" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+-->
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">		
+            <div class="col-sm-12">
+            <div class="main-header-box" >
+        	<a class="header-avatar" href="/" title='Easton yan'>
+            	<img src="/img/logo.png" alt="logo" class="img-responsive" style="float: left; width: 3.5em; height:3.5em;margin-top: 0.6em">
+            	<span style="float: left; line-height: 4em; font-size: 1.2em; margin-left: 0.3em; color:#505050">EASTON STACK</span>
+        	</a>
+				</div>
+               
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+				
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/os/"><i class="fa "></i>系统</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/network/"><i class="fa "></i>网络</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/cluster/"><i class="fa "></i>集群</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/docker/"><i class="fa "></i>容器</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/python/"><i class="fa "></i>语言</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/mt/"><i class="fa "></i>运维工具</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="verdaccio">
+            
+	            verdaccio
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/cluster">
+            cluster
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/verdaccio" title='verdaccio'>
+                        verdaccio
+                    </a>
+                
+                    <a href="/tags/npm私服" title='npm私服'>
+                        npm私服
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2021/07/05</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>公司，vue项目越来越多，对node支撑需要npm私服的支持。<br>所以自己搭建了npm在选型中：开发一致认为 verdaccio 是最佳选择，所以自己搭建了一个私服。<br>因为是新申请主机，我们从零开始 ，搭建一个私服，记录下。<br>verdaccio 首先需要node私服支持</p>
+<h3 id="1、-npm-node环境安装："><a href="#1、-npm-node环境安装：" class="headerlink" title="1、 npm node环境安装："></a>1、 npm node环境安装：</h3><p>下载安装包：<br><a target="_blank" rel="noopener" href="https://nodejs.org/dist/v14.17.2/node-v14.17.2-linux-x64.tar.xz">https://nodejs.org/dist/v14.17.2/node-v14.17.2-linux-x64.tar.xz</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xz -d /opt/tmp/node-v14.17.2-linux-x64.tar.xz</span><br><span class="line">mkdir /opt/node &amp;&amp; <span class="built_in">cd</span> /opt/node/ &amp;&amp; tar xvf  /opt/tmp/node-v14.17.2-linux-x64.tar</span><br></pre></td></tr></table></figure>
+
+
+<p>配置node环境变量:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&#x27;</span><span class="string">&#x27;NODE_HOME=/opt/node/node  </span></span><br><span class="line"><span class="string">PATH=$PATH:$NODE_HOME/bin  </span></span><br><span class="line"><span class="string">export NODE_HOME PATH &#x27;</span><span class="string">&#x27;&#x27;</span> &gt;  /etc/profile.d/node.sh </span><br></pre></td></tr></table></figure>
+
+
+<p>查看版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@prod-npm- tmp]<span class="comment"># node  -v</span></span><br><span class="line">v14.17.2</span><br><span class="line">[root@prod-npm- tmp]<span class="comment"># npm -v</span></span><br><span class="line">6.14.13</span><br><span class="line">[root@prod-npm- tmp]<span class="comment"># </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="2-verdaccio-安装"><a href="#2-verdaccio-安装" class="headerlink" title="2.  verdaccio 安装:"></a>2.  verdaccio 安装:</h3><p>2.1 全局安装verdaccio：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g verdaccio</span><br></pre></td></tr></table></figure>
+<p>全局安装pm2，用来守护node进程：</p>
+<p>pm2 start ** // 启动;<br>pm2 reload ** //重启 ;<br>pm2 logs *** // 日志</p>
+<p>2.2 配置:<br> 这个配置：/opt/node/node/lib/node_modules/verdaccio/conf/default.yaml<br> node: 这个是初始配置：<br> 新增监听端口:<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">listen:</span><br><span class="line">   0.0.0.0:4873</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-3-由于npm-私服不建议使用root-用户："><a href="#2-3-由于npm-私服不建议使用root-用户：" class="headerlink" title="2.3 由于npm 私服不建议使用root 用户："></a>2.3 由于npm 私服不建议使用root 用户：</h3><p>新建用户:<br>verdaccio</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -d /opt/verdaccio  verdaccio</span><br></pre></td></tr></table></figure>
+
+<p>默认的配置，随意的注册用户。但是对于公司私服来说，通常不希望这样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">auth:</span><br><span class="line">  htpasswd:</span><br><span class="line">    file: ./htpasswd</span><br><span class="line">    max_users: -1</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-私服使用用户管理："><a href="#2-4-私服使用用户管理：" class="headerlink" title="2.4  私服使用用户管理："></a>2.4  私服使用用户管理：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[verdaccio@prod-npm- ~]$ npm adduser --registry http://10.60.186.217:4873/</span><br><span class="line">Username: demo</span><br><span class="line">Password: </span><br><span class="line">Email: (this IS public) demo@ouyeel.com</span><br><span class="line">Logged <span class="keyword">in</span> as demo on http://10.60.186.217:4873/.</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="3、node源管理工具-nrm"><a href="#3、node源管理工具-nrm" class="headerlink" title="3、node源管理工具  nrm"></a>3、node源管理工具  nrm</h3><h3 id="3-1-nrm工具安装"><a href="#3-1-nrm工具安装" class="headerlink" title="3.1 nrm工具安装"></a>3.1 nrm工具安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br><span class="line">[verdaccio@prod- ~]$ nrm --version</span><br><span class="line">1.2.1</span><br><span class="line">[verdaccio@prod- ~]$ nrm ls</span><br><span class="line"></span><br><span class="line">* npm -------- https://registry.npmjs.org/</span><br><span class="line">  yarn ------- https://registry.yarnpkg.com/</span><br><span class="line">  cnpm ------- http://r.cnpmjs.org/</span><br><span class="line">  taobao ----- https://registry.npm.taobao.org/</span><br><span class="line">  nj --------- https://registry.nodejitsu.com/</span><br><span class="line">  npmMirror -- https://skimdb.npmjs.com/registry/</span><br><span class="line">  edunpm ----- http://registry.enpmjs.org/</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-2-源的使用切换"><a href="#3-2-源的使用切换" class="headerlink" title="3.2  源的使用切换"></a>3.2  源的使用切换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nrm use npm</span><br><span class="line">   Registry has been <span class="built_in">set</span> to: https://registry.npmjs.org/</span><br><span class="line">nrm add company http://npm.company.com/</span><br><span class="line">    add registry company success</span><br><span class="line">nrm del company</span><br><span class="line">    delete registry company success</span><br></pre></td></tr></table></figure>
+
+
+<p>nrm 内置源列表</p>
+<table>
+<thead>
+<tr>
+<th>源</th>
+<th>URL</th>
+<th>主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>npm</td>
+<td><a target="_blank" rel="noopener" href="https://registry.npmjs.org/">https://registry.npmjs.org/</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com/</a></td>
+</tr>
+<tr>
+<td>cnpm</td>
+<td><a target="_blank" rel="noopener" href="http://r.cnpmjs.org/">http://r.cnpmjs.org/</a></td>
+<td><a target="_blank" rel="noopener" href="https://cnpmjs.org/">https://cnpmjs.org/</a></td>
+</tr>
+<tr>
+<td>taobao</td>
+<td><a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org/</a></td>
+<td><a target="_blank" rel="noopener" href="https://npm.taobao.org/">https://npm.taobao.org/</a></td>
+</tr>
+<tr>
+<td>npmMirror</td>
+<td><a target="_blank" rel="noopener" href="https://skimdb.npmjs.com/regi">https://skimdb.npmjs.com/regi</a>…</td>
+<td><a target="_blank" rel="noopener" href="https://skimdb.npmjs.com/">https://skimdb.npmjs.com/</a></td>
+</tr>
+<tr>
+<td>nj</td>
+<td><a target="_blank" rel="noopener" href="https://registry.nodejitsu.com/">https://registry.nodejitsu.com/</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.nodejitsu.com/">https://www.nodejitsu.com/</a></td>
+</tr>
+<tr>
+<td>rednpm</td>
+<td><a href="http://registry.mirror.cqupt…">http://registry.mirror.cqupt…</a>.</td>
+<td><a target="_blank" rel="noopener" href="http://npm.mirror.cqupt.edu.cn/">http://npm.mirror.cqupt.edu.cn/</a></td>
+</tr>
+<tr>
+<td>edunpm</td>
+<td><a target="_blank" rel="noopener" href="http://registry.enpmjs.org/">http://registry.enpmjs.org/</a></td>
+<td><a target="_blank" rel="noopener" href="http://www.enpmjs.org/">http://www.enpmjs.org/</a></td>
+</tr>
+</tbody></table>
+<h3 id="3-3-私服使用："><a href="#3-3-私服使用：" class="headerlink" title="3.3  私服使用："></a>3.3  私服使用：</h3><p>  等使用后，记录问题及补充……。</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">easton stack</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2021/06/15/druid/" class="next-post btn btn-default" title='druid'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">druid</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC81MjkyNi8yOTQwMw==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>Welcome to easton stack .... <br/>
+
+<hr/>接受赞助服务！如果你觉得本站内容对你有帮助，就赞助下呗(≥◇≤) <br/>赞助地址：<a target="_blank" rel="noopener" href="http://tycn.51rgb.cn/static/img/alipay_donate.png">我要赞助下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:easton88@163.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/cluster/"><i class="fa" aria-hidden="true">cluster</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/"><i class="fa" aria-hidden="true">docker</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/"><i class="fa" aria-hidden="true">linux</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mt/"><i class="fa" aria-hidden="true">mt</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/network/"><i class="fa" aria-hidden="true">network</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/os/"><i class="fa" aria-hidden="true">os</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/"><i class="fa" aria-hidden="true">python</i></a><span class="category-list-count">4</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/"><i class="fa" aria-hidden="true">七月 2021</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/"><i class="fa" aria-hidden="true">六月 2021</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/"><i class="fa" aria-hidden="true">五月 2021</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/"><i class="fa" aria-hidden="true">四月 2021</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/"><i class="fa" aria-hidden="true">三月 2021</i></a><span class="archive-list-count">10</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/Filter%EF%BC%8DChain/" style="font-size: 10px;">Filter－Chain</a> <a href="/tags/SQLParser/" style="font-size: 10px;">SQLParser</a> <a href="/tags/docxtpl/" style="font-size: 10px;">docxtpl</a> <a href="/tags/druid/" style="font-size: 10px;">druid</a> <a href="/tags/examination/" style="font-size: 10px;">examination</a> <a href="/tags/fproxy/" style="font-size: 10px;">fproxy</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/go%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">go介绍</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/key/" style="font-size: 10px;">key</a> <a href="/tags/linux/" style="font-size: 16.67px;">linux</a> <a href="/tags/linux%E6%97%8F%E7%B3%BB/" style="font-size: 10px;">linux族系</a> <a href="/tags/logrotate/" style="font-size: 10px;">logrotate</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/npm%E7%A7%81%E6%9C%8D/" style="font-size: 10px;">npm私服</a> <a href="/tags/os/" style="font-size: 20px;">os</a> <a href="/tags/pyenv/" style="font-size: 10px;">pyenv</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/python%E7%89%88%E6%9C%AC/" style="font-size: 10px;">python版本</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/verdaccio/" style="font-size: 10px;">verdaccio</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" style="font-size: 10px;">免密登录</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E5%AF%86%E9%92%A5/" style="font-size: 10px;">密钥</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 10px;">文件操作</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 10px;">网络工程师</a> <a href="/tags/%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2/" style="font-size: 10px;">考试大纲</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">自动化测试</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8A%A5%E8%A1%A8/" style="font-size: 10px;">自动报表</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">项目环境</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.baidu.com" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2021
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	
+<script src="/js/search.js?rev=@@hash.js"></script>
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+
+
+</body>
+</html>
